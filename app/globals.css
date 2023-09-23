@@ -2,3 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+ 
+
+  .btn-primary {
+    @apply text-white text-xs md:text-sm 2xl:text-base font-medium px-4 lg:px-5 2xl:px-8 py-5 lg:py-4 rounded-[10px] bg-primaryColor hover:bg-primaryHover
+  }
+
+  .btn-secondary {
+    @apply text-xs md:text-sm 2xl:text-base border border-black px-4 lg:px-5 2xl:px-8 py-5 lg:py-4 rounded-[10px] font-medium hover:text-white hover:bg-primaryHover
+  }
+
+  .btn-tertiary {
+    @apply text-white text-xs md:text-base lg:text-lg font-medium px-4 lg:px-5 2xl:px-9 py-5 sm:py-3 xl:py-3 2xl:py-5 rounded-[4px] lg:rounded-md bg-secondaryColor hover:bg-secondaryHover
+  }
+
+  .btn-black-and-white {
+    @apply flex items-center rounded-md border border-black bg-white px-6 py-2 text-center text-sm font-medium text-textSecondaryColor hover:text-white hover:bg-gray-700 2xl:px-8 2xl:py-3;
+  }
+
+}
