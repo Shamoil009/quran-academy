@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <div className="py-8 px-8 flex justify-between items-center">
+    <div className="py-6 px-8 flex justify-between items-center">
     <Image src={Logo} height={2000} width={2000} className="w-32" alt="" />
     <div className="flex gap-4 text-2xl">
       <div>Home</div>

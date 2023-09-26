@@ -20,8 +20,7 @@ const config: Config = {
         textSecondaryColor: "#22022B",
         textTertiaryColor: "#2C292C",
         FooterColor: "#4D4D4D",
-        correctAnswer:"#009D19",
-        incorrectAnswer:"#DC493A",
+        
         moduletextColor: "#474747",
         moduleCard:"#ADB2C0",
        
@@ -36,7 +35,7 @@ const config: Config = {
       backgroundImage: {
         "home-student": "linear-gradient(180deg, #17005E 0%, #340FA6 100%);",
         "header-select":"linear-gradient(90deg, #FFF 46.81%, rgba(217, 217, 217, 0.00) 70%);",       
-        BgImage: "url('/images/creator-dashboard-bg-image.svg')",
+        BackgroundImage: "url('/images/landing-background.jpg')",
       },
       fontFamily: {
         SFProText: ["SFPro"],
