@@ -5,8 +5,9 @@ import PageTop from "@/public/images/ramadan.jpg";
 import WhyUs from "@/public/images/why-us.jpg";
 import Books from "@/public/images/library-book-education.svg";
 import Teacher from "@/public/images/teacher.svg";
+import FounderImage from "@/public/images/founder-image.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBook } from "@fortawesome/free-solid-svg-icons";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 const Landing = () => {
   return (
@@ -68,10 +69,49 @@ const Landing = () => {
             </section>
             {/* ------book and teacher section end-----*/}
 
+            {/* Founder message */}
+            <section className=" pt-24 text-textPrimaryColor">
+              <div className="pb-6 text-center text-4xl font-semibold">
+                Message from our Founder{"'"}s
+              </div>
+              <div className="flex w-full justify-center ">
+                <div className="flex w-[70%] gap-10 p-3">
+                  <Image
+                    src={FounderImage}
+                    className=" h-72 w-72 rounded-full object-cover"
+                    height={2000}
+                    width={2000}
+                    alt=""
+                  />
+                  <div className=" text-2xl ">
+                    <div className="text-4xl font-semibold">
+                      Quran Education for all
+                    </div>
+                    <div className=" py-5 font-medium leading-10">
+                      The Holy Quran is the final message from Allah Almighty to
+                      all of humanity. It is a blessed scripture that is recited
+                      and acted upon, serving as a guide for the success and
+                      prosperity of individuals in this world and the hereafter.
+                      It is highly recommended to engage with the Quran, reflect
+                      upon its teachings, and implement them in our lives. We
+                      strive to ensure that the services provided by the online
+                      Quran Academy maintain high standards, and we encourage
+                      you to take advantage of this opportunity to benefit
+                      yourself and your children by connecting them with the
+                      teachings of the Holy Quran.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            {/* ----founder message end */}
+
             {/* about us */}
-            <section className=" py-24  text-textPrimaryColor">
-              <div className="text-4xl pb-6 text-textSecondaryColor font-semibold text-center">Why us?</div>
-              <div className="flex items-center gap-10 w-full">
+            <section className=" pt-24  text-textPrimaryColor">
+              <div className="pb-6 text-center text-4xl font-semibold">
+                Why us?
+              </div>
+              <div className="flex w-full items-center gap-10">
                 <div className="w-[40%] p-3">
                   <Image
                     src={WhyUs}
@@ -81,9 +121,11 @@ const Landing = () => {
                     alt=""
                   />
                 </div>
-                <div className="w-[60%]">
-                  <div className="text-4xl font-semibold">Quran Education for all</div>
-                  <div className="font-medium w-[80%] pt-5 text-3xl leading-10">
+                <div className="w-[60%] text-2xl ">
+                  <div className="text-4xl font-semibold">
+                    Quran Education for all
+                  </div>
+                  <div className="w-[80%] py-5 font-medium leading-10">
                     Alquran Academy is an Online Quran Education platform, which
                     provides the facility to Learn Quran Online Islamic and Qur
                     {`'`}anic teachings to Muslim students across the world. As
@@ -93,6 +135,43 @@ const Landing = () => {
                     learn Quran. Initially, we offer a course named Nazirah Qur
                     {`'`}an with Tajweed.
                   </div>
+                  <ol className="space-y-2 font-medium">
+                    <li className="flex gap-3">
+                      <FontAwesomeIcon
+                        icon={faCheck}
+                        className="w-5 text-secondaryColor"
+                      />
+                      Face-to-face online classes
+                    </li>
+                    <li className="flex gap-3">
+                      <FontAwesomeIcon
+                        icon={faCheck}
+                        className="w-5 text-secondaryColor"
+                      />
+                      Modern teaching tools
+                    </li>
+                    <li className="flex gap-3">
+                      <FontAwesomeIcon
+                        icon={faCheck}
+                        className="w-5 text-secondaryColor"
+                      />
+                      Well-educated and well-versed scholars
+                    </li>
+                    <li className="flex gap-3">
+                      <FontAwesomeIcon
+                        icon={faCheck}
+                        className="w-5 text-secondaryColor"
+                      />
+                      Flexible schedule for students
+                    </li>
+                    <li className="flex gap-3">
+                      <FontAwesomeIcon
+                        icon={faCheck}
+                        className="w-5 text-secondaryColor"
+                      />
+                      Friendly environment for students
+                    </li>
+                  </ol>
                 </div>
               </div>
             </section>
