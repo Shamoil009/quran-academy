@@ -21,7 +21,7 @@ const config: Config = {
         textTertiaryColor: "#2C292C",
         FooterColor: "#4D4D4D",
         
-        moduletextColor: "#474747",
+        courseBgColor: "#F9FAFF",
         moduleCard:"#ADB2C0",
        
       },

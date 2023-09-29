@@ -1,6 +1,9 @@
 import React from "react";
 import Header from "../Header";
 import Image from "next/image";
+import CourseCard from "../CourseCard/CourseCard";
+import { COURSES } from "@/constants/courses";
+
 import PageTop from "@/public/images/ramadan.jpg";
 import WhyUs from "@/public/images/why-us.jpg";
 import Books from "@/public/images/library-book-education.svg";
@@ -84,9 +87,6 @@ const Landing = () => {
                     alt=""
                   />
                   <div className=" text-2xl ">
-                    <div className="text-4xl font-semibold">
-                      Quran Education for all
-                    </div>
                     <div className=" py-5 font-medium leading-10">
                       The Holy Quran is the final message from Allah Almighty to
                       all of humanity. It is a blessed scripture that is recited
@@ -100,14 +100,36 @@ const Landing = () => {
                       yourself and your children by connecting them with the
                       teachings of the Holy Quran.
                     </div>
+                    <div>Allama Hafiz Abdul Qadir</div>
+                    <div>Founder</div>
                   </div>
                 </div>
               </div>
             </section>
             {/* ----founder message end */}
 
+            {/* Courses Section */}
+            <section className=" bg-courseBgColor py-20  text-textPrimaryColor">
+              <div className="pb-6 text-center text-4xl font-semibold">
+                Our featured courses
+              </div>
+              <div className="flex flex-wrap gap-x-3 gap-y-8 justify-between">
+                {COURSES.map((value: any, index: number) => {
+                  return (
+                    <CourseCard
+                      key={index}
+                      id={value.id}
+                      name={value.name}
+                      classType={value.classType}
+                      timing={value.timing}
+                    />
+                  );
+                })}
+              </div>
+            </section>
+
             {/* about us */}
-            <section className=" pt-24  text-textPrimaryColor">
+            <section className=" pt-24 text-textPrimaryColor">
               <div className="pb-6 text-center text-4xl font-semibold">
                 Why us?
               </div>
