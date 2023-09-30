@@ -10,9 +10,9 @@ const config: Config = {
     extend: {
       colors: {
         primaryColor: "#146C94",
-        primaryHover: "#17005E",
+        primaryHover: "#19A7CE",
         secondaryColor: "#19A7CE",
-        secondaryHover: "#17009E",
+        secondaryHover: "#3493ad",
         tertiaryColor: "#AFD3E2",
         backgroundColor:"#F6F1F1",
 
@@ -36,6 +36,7 @@ const config: Config = {
         "home-student": "linear-gradient(180deg, #17005E 0%, #340FA6 100%);",
         "header-select":"linear-gradient(90deg, #FFF 46.81%, rgba(217, 217, 217, 0.00) 70%);",       
         BackgroundImage: "url('/images/landing-background.jpg')",
+        courseDetail:"url('/images/course-detail-image.jpg')"
       },
       fontFamily: {
         SFProText: ["SFPro"],
