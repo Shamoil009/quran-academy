@@ -23,10 +23,14 @@ const Header = () => {
   };
 
   return (
-    <div className="my-4 flex items-center justify-between px-2 lg:px-5 lg:my-7 2xl:my-10">
-      {/* <div className="w-[40%] md:w-[25%] lg:w-[7%] flex justify-center 2xl:ml-8"> */}
-      <Image src={Logo} width={100} height={100} alt="logo" className="w-28" />
-      {/* </div> */}
+    <div className="my-4 flex items-center justify-between px-2 lg:my-4 lg:px-5 2xl:my-7">
+      <Image
+        src={Logo}
+        width={100}
+        height={100}
+        alt="logo"
+        className="w-20 xl:w-24 2xl:w-28"
+      />
       <div
         className="cursor-pointer lg:hidden"
         onClick={() => setOpenSidebar(true)}
@@ -49,7 +53,7 @@ const Header = () => {
       <div
         className={`fixed right-0 top-0 z-30 flex w-[70%] flex-col duration-300 ease-in-out sm:w-[50%] lg:relative lg:z-0 lg:w-full lg:translate-x-0 lg:flex-row  ${
           openSidebar ? "translate-x-0 " : "translate-x-full"
-        } h-full bg-primaryColor lg:bg-white`}
+        } h-full bg-primaryColor lg:bg-transparent`}
       >
         <div
           className="mx-3 my-4 ml-auto cursor-pointer select-none lg:hidden"
@@ -59,7 +63,7 @@ const Header = () => {
           {/* <CancelIcon color="inherit" className="!text-2xl text-white" /> */}
         </div>
 
-        <div className="flex flex-col items-center text-white lg:text-textPrimaryColor gap-4 pt-[10%] lg:ml-auto lg:flex-row lg:pt-0">
+        <div className="flex flex-col items-center xl:text-lg gap-4 pt-[10%] text-white lg:ml-auto lg:flex-row lg:pt-0 lg:text-textPrimaryColor">
           <div>Home</div>
           <div>About us</div>
           <div>Courses</div>

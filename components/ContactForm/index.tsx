@@ -47,7 +47,7 @@ const ContactForm = () => {
                 {/* Name, email */}
                 <div className="flex gap-x-7">
                   <div className="w-[50%]">
-                    <div>Name</div>
+                    <div className="font-medium">Name</div>
                     <input
                       type="text"
                       name=""
@@ -56,7 +56,7 @@ const ContactForm = () => {
                     />
                   </div>
                   <div className="w-[50%]">
-                    <div>Email</div>
+                    <div className="font-medium">Email</div>
                     <input
                       type="text"
                       name=""
@@ -68,7 +68,7 @@ const ContactForm = () => {
 
                 <div className="flex items-end gap-x-7">
                   <div className="w-[50%]">
-                    <div>Gender</div>
+                    <div className="font-medium">Gender</div>
                     <select
                       name=""
                       className="mt-2 w-full border-b border-black bg-transparent p-2 outline-none"
@@ -79,7 +79,7 @@ const ContactForm = () => {
                     </select>
                   </div>
                   <div className="w-[50%]">
-                    <div>Country</div>
+                    <div className="font-medium">Country</div>
                     <input
                       type="text"
                       name=""
@@ -104,18 +104,25 @@ const ContactForm = () => {
                   />
                 </div>
                 <div>
-                  Choose Course(s)
-                  <div className="grid grid-cols-2">
-                  {COURSES.map((value: any, index: number) => {
-                    return (
-                      <div key={index} className="py-1 flex gap-2">
-                        <input type="checkbox" name={value.name} className="accent-primaryColor"/>
-                        <div>{value.name}</div>
-                      </div>
-                    );
-                  })}
+                  <div className="font-medium">Choose Course(s)</div>
+                  <div className="grid grid-cols-2 pt-2">
+                    {COURSES.map((value: any, index: number) => {
+                      return (
+                        <div key={index} className="flex gap-2 py-1">
+                          <input
+                            type="checkbox"
+                            name={value.name}
+                            className="accent-primaryColor"
+                          />
+                          <div className="min-w-fit">{value.name}</div>
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
+              </div>
+              <div className="flex justify-center pt-2">
+                <button className="btn-primary my-3 rounded-md">Submit</button>
               </div>
             </div>
 
@@ -151,7 +158,6 @@ const ContactForm = () => {
               </div>
             </div>
           </div>
-          {/* <button className="btn-primary my-3">Submit</button> */}
         </div>
       </section>
 

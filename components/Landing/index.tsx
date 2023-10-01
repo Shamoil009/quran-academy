@@ -14,13 +14,13 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 const Landing = () => {
   return (
     <div>
-      <div className=" stroke-black stroke-1 py-6 text-[#eee8e8]">
-        <div className="flex h-[34rem] w-full flex-col justify-center bg-gray-400 bg-BackgroundImage bg-cover px-10 bg-blend-multiply">
+      <div className=" stroke-black stroke-1 pb-6 text-[#eee8e8]">
+        <div className="flex min-h-fit w-full flex-col justify-center bg-gray-400 bg-BackgroundImage bg-cover px-10 bg-blend-multiply lg:h-[28rem] xl:h-[30rem] 2xl:h-[34rem]">
           <div className="w-[70%]">
-            <h1 className="text-5xl font-semibold bg-blend-normal">
+            <h1 className="text-2xl font-semibold bg-blend-normal xl:text-3xl 2xl:text-5xl">
               Online Quran Learning Platform
             </h1>
-            <p className="w-[85%] pt-5 text-3xl leading-10 bg-blend-normal">
+            <p className="w-[85%] pt-5 text-lg bg-blend-normal xl:text-xl 2xl:text-3xl 2xl:leading-10">
               An Online Quran Education platform, which provides the facility to
               Learn Quran Online Islamic and Quranic teachings to Muslim
               students across the world in four languages: English, Persian,
@@ -32,34 +32,38 @@ const Landing = () => {
 
         <div className="px-10 py-8">
           {/* book and teacher section */}
-          <section className="flex justify-evenly text-textPrimaryColor">
-            <div className="flex max-w-[31rem] items-center gap-4 rounded-3xl border border-gray-200 px-7 py-9 shadow-md">
+          <section className="flex justify-evenly gap-2 2xl:gap-3 text-textPrimaryColor">
+            <div className="flex max-w-[31rem] items-center gap-4 rounded-3xl border border-gray-200 px-5 2xl:px-7 py-5 2xl:py-9 shadow-md">
               <Image
                 src={Books}
-                className="w-20"
+                className="w-16 xl:w-20"
                 height={2000}
                 width={2000}
                 alt=""
               />
               <div>
-                <div className="text-3xl font-semibold">60+ courses</div>
-                <div className="text-xl font-medium">
+                <div className="text-lg font-semibold xl:text-xl 2xl:text-3xl">
+                  60+ courses
+                </div>
+                <div className="text-base xl:text-lg 2xl:text-xl font-medium">
                   Variety of courses for you to choose
                 </div>
               </div>
             </div>
 
-            <div className="flex max-w-[31rem] items-center gap-4 rounded-3xl border border-gray-200 px-7 py-9 shadow-md">
+            <div className="flex max-w-[31rem] items-center gap-4 rounded-3xl border border-gray-200 px-5 2xl:px-7 py-5 2xl:py-9 shadow-md">
               <Image
                 src={Teacher}
-                className="w-20"
+                className="w-16 xl:w-20"
                 height={2000}
                 width={2000}
                 alt=""
               />
               <div>
-                <div className="text-3xl font-semibold">Expert instructors</div>
-                <div className="text-xl font-medium">
+                <div className="text-lg font-semibold xl:text-xl 2xl:text-3xl">
+                  Expert instructors
+                </div>
+                <div className="text-base xl:text-lg 2xl:text-xl font-medium">
                   Learn from expert teachers to elivate your skills
                 </div>
               </div>
@@ -68,21 +72,21 @@ const Landing = () => {
           {/* ------book and teacher section end-----*/}
 
           {/* Founder message */}
-          <section className=" py-16 text-textPrimaryColor">
-            <div className="pb-6 text-center text-4xl font-semibold">
+          <section className="py-10 xl:py-12 2xl:py-16 text-textPrimaryColor">
+            <div className="pb-3 xl:pb-4 2xl:pb-6 text-center text-2xl xl:text-3xl 2xl:text-4xl font-semibold">
               Message from our Founder{"'"}s
             </div>
             <div className="flex w-full justify-center ">
-              <div className="flex w-[70%] gap-10 p-3">
+              <div className="flex w-[90%] xl:w-[80%] 2xl:w-[70%] gap-5 xl:gap-7 2xl:gap-10 p-2 xl:p-3">
                 <Image
                   src={FounderImage}
-                  className=" h-72 w-72 rounded-full object-cover"
+                  className="h-52 w-52 xl:h-60 xl:w-60 2xl:h-72 2xl:w-72 rounded-full object-cover"
                   height={2000}
                   width={2000}
                   alt=""
                 />
-                <div className=" text-2xl ">
-                  <div className=" py-5 font-medium leading-10">
+                <div className=" text-lg xl:text-xl 2xl:text-2xl ">
+                  <div className=" py-5 font-medium 2xl:leading-10">
                     The Holy Quran is the final message from Allah Almighty to
                     all of humanity. It is a blessed scripture that is recited
                     and acted upon, serving as a guide for the success and
@@ -104,11 +108,11 @@ const Landing = () => {
           {/* ----founder message end */}
 
           {/* Courses Section */}
-          <section className=" bg-courseBgColor py-20 text-textPrimaryColor">
-            <div className="pb-12 text-center text-4xl font-semibold">
+          <section className=" bg-courseBgColor py-10 xl:py-14 2xl:py-20 text-textPrimaryColor">
+            <div className="pb-12 text-center text-2xl xl:text-3xl 2xl:text-4xl font-semibold">
               Our featured courses
             </div>
-            <div className="flex flex-wrap justify-between gap-x-3 gap-y-14">
+            <div className="flex flex-wrap justify-between gap-x-2 2xl:gap-x-3 gap-y-14">
               {COURSES.map((value: any, index: number) => {
                 return (
                   <CourseCard
@@ -125,8 +129,8 @@ const Landing = () => {
           </section>
 
           {/* about us */}
-          <section className=" pt-24 text-textPrimaryColor flex flex-col items-center">
-            <div className="pb-8 text-center text-4xl font-semibold">
+          <section className=" flex flex-col items-center pt-24 text-textPrimaryColor">
+            <div className="pb-8 text-center text-2xl xl:text-3xl 2xl:text-4xl font-semibold">
               Why us?
             </div>
             <div className="flex w-[90%] items-center gap-10">
@@ -139,8 +143,8 @@ const Landing = () => {
                   alt=""
                 />
               </div>
-              <div className="w-[50%] text-2xl ">
-                <div className="text-4xl font-semibold">
+              <div className="w-[50%] text-lg xl:text-xl 2xl:text-2xl">
+                <div className="text-2xl xl:text-3xl 2xl:text-4xl font-semibold">
                   Quran Education for all
                 </div>
                 <div className=" py-5 font-medium leading-10">
