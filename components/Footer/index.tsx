@@ -23,10 +23,10 @@ const Footer = () => {
               src={Logo}
               height={2000}
               width={2000}
-              className="w-32"
+              className="w-20 xl:w-28 2xl:w-32"
               alt=""
             />
-            <div className="">
+            <div >
               Online Quran Education platform, which provides the facility to
               Learn Islamic and Quranic teachings to Muslim students across the
               world.

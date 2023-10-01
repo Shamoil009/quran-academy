@@ -30,9 +30,9 @@ const Landing = () => {
           </div>
         </div>
 
-        <div className="px-10 py-8">
+        <div className="">
           {/* book and teacher section */}
-          <section className="flex justify-evenly gap-2 2xl:gap-3 text-textPrimaryColor">
+          <section className="flex justify-evenly gap-2 2xl:gap-3 text-textPrimaryColor px-6 xl:px-8 2xl:px-10 py-4 xl:py-6 2xl:py-8">
             <div className="flex max-w-[31rem] items-center gap-4 rounded-3xl border border-gray-200 px-5 2xl:px-7 py-5 2xl:py-9 shadow-md">
               <Image
                 src={Books}
@@ -72,7 +72,7 @@ const Landing = () => {
           {/* ------book and teacher section end-----*/}
 
           {/* Founder message */}
-          <section className="py-10 xl:py-12 2xl:py-16 text-textPrimaryColor">
+          <section className="px-6 xl:px-8 2xl:px-10 py-8 xl:py-12 2xl:py-16 text-textPrimaryColor">
             <div className="pb-3 xl:pb-4 2xl:pb-6 text-center text-2xl xl:text-3xl 2xl:text-4xl font-semibold">
               Message from our Founder{"'"}s
             </div>
@@ -108,7 +108,7 @@ const Landing = () => {
           {/* ----founder message end */}
 
           {/* Courses Section */}
-          <section className=" bg-courseBgColor py-10 xl:py-14 2xl:py-20 text-textPrimaryColor">
+          <section className=" bg-courseBgColor px-6 xl:px-8 2xl:px-10 py-8 xl:py-14 2xl:py-20 text-textPrimaryColor">
             <div className="pb-12 text-center text-2xl xl:text-3xl 2xl:text-4xl font-semibold">
               Our featured courses
             </div>
@@ -129,11 +129,11 @@ const Landing = () => {
           </section>
 
           {/* about us */}
-          <section className=" flex flex-col items-center pt-24 text-textPrimaryColor">
+          <section className=" flex flex-col items-center pt-10 xl:pt-16 2xl:pt-24 text-textPrimaryColor">
             <div className="pb-8 text-center text-2xl xl:text-3xl 2xl:text-4xl font-semibold">
               Why us?
             </div>
-            <div className="flex w-[90%] items-center gap-10">
+            <div className="flex w-[95%] xl:w-[90%] items-center gap-4 xl:gap-7 2xl:gap-10">
               <div className="w-[45%] p-3">
                 <Image
                   src={WhyUs}
@@ -147,7 +147,7 @@ const Landing = () => {
                 <div className="text-2xl xl:text-3xl 2xl:text-4xl font-semibold">
                   Quran Education for all
                 </div>
-                <div className=" py-5 font-medium leading-10">
+                <div className=" py-3 2xl:py-5 font-medium lg:leading-10">
                   Alquran Academy is an Online Quran Education platform, which
                   provides the facility to Learn Quran Online Islamic and Qur
                   {`'`}anic teachings to Muslim students across the world. As a
@@ -157,36 +157,36 @@ const Landing = () => {
                   Quran. Initially, we offer a course named Nazirah Qur
                   {`'`}an with Tajweed.
                 </div>
-                <ol className="space-y-2 font-medium">
-                  <li className="flex gap-3">
+                <ol className="space-y-1 2xl:space-y-2 font-medium">
+                  <li className="flex items-center gap-2 2xl:gap-3">
                     <FontAwesomeIcon
                       icon={faCheck}
                       className="w-5 text-secondaryColor"
                     />
                     Face-to-face online classes
                   </li>
-                  <li className="flex gap-3">
+                  <li className="flex items-center gap-2 2xl:gap-3">
                     <FontAwesomeIcon
                       icon={faCheck}
                       className="w-5 text-secondaryColor"
                     />
                     Modern teaching tools
                   </li>
-                  <li className="flex gap-3">
+                  <li className="flex items-center gap-2 2xl:gap-3">
                     <FontAwesomeIcon
                       icon={faCheck}
                       className="w-5 text-secondaryColor"
                     />
                     Well-educated and well-versed scholars
                   </li>
-                  <li className="flex gap-3">
+                  <li className="flex items-center gap-2 2xl:gap-3">
                     <FontAwesomeIcon
                       icon={faCheck}
                       className="w-5 text-secondaryColor"
                     />
                     Flexible schedule for students
                   </li>
-                  <li className="flex gap-3">
+                  <li className="flex items-center gap-2 2xl:gap-3">
                     <FontAwesomeIcon
                       icon={faCheck}
                       className="w-5 text-secondaryColor"
