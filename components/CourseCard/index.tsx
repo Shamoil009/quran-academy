@@ -38,6 +38,12 @@ const CourseCard = ({ id, name, timing, classType, image }: Props) => {
           <button onClick={viewCourseHandler} className="btn-secondary">
             view details
           </button>
+          {/* <picture>
+            <source type="image/webp" srcSet="flower.webp"/>
+            <source type="image/jpeg" srcSet="flower.jpg"/>
+            <img src="flower.jpg" alt=""/>
+
+          </picture> */}
         </div>
       </div>
     </div>
