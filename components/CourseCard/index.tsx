@@ -19,7 +19,7 @@ const CourseCard = ({ id, name, timing, classType, image }: Props) => {
   };
 
   return (
-    <div className="w-[17rem] lg:w-[18rem] xl:w-[24rem] 2xl:w-[28rem] rounded-3xl border-2 border-t-0 border-gray-300 shadow-md">
+    <div className="w-[17rem] lg:w-[18rem] xl:w-[24rem] 2xl:w-[28rem] rounded-2xl lg:rounded-3xl border-2 border-t-0 border-gray-300 shadow-md">
       <Image
         src={image ? image : ""}
         className="h-44 xl:h-52 2xl:h-64 w-full rounded-t-3xl object-cover"
@@ -32,7 +32,7 @@ const CourseCard = ({ id, name, timing, classType, image }: Props) => {
           <div>{classType}</div>
           <div>{timing}</div>
         </div>
-        <div className="h-20 xl:h-28 2xl:h-32 lg:py-4 2xl:py-6 xl:text-2xl text-xl 2xl:text-3xl font-bold">{name}</div>
+        <div className="h-20 xl:h-28 2xl:h-32 py-2 lg:py-4 2xl:py-6 xl:text-2xl text-lg lg:text-xl 2xl:text-3xl font-bold">{name}</div>
 
         <div className="flex justify-center py-2 xl:py-3 2xl:py-4">
           <button onClick={viewCourseHandler} className="btn-secondary">

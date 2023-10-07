@@ -15,7 +15,7 @@ import Logo from "@/public/images/logo.png";
 
 const Footer = () => {
   return (
-    <footer className=" bg-courseBgColor px-5 py-9 text-sm text-FooterColor lg:px-0 lg:pb-16 lg:pt-12 2xl:pb-20 2xl:pt-16 2xl:text-base">
+    <footer className=" bg-courseBgColor px-5 py-12 text-sm text-FooterColor lg:px-0 lg:pb-16 lg:pt-12 2xl:pb-20 2xl:pt-16 2xl:text-base">
       <div className="flex  lg:justify-center ">
         <div className="flex flex-col justify-between lg:w-[90%] lg:flex-row 2xl:w-[90%] ">
           <section className="w-[90%] lg:w-[25%] space-y-2 2xl:space-y-4">

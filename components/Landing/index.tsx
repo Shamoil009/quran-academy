@@ -16,7 +16,7 @@ const Landing = () => {
   return (
     <div>
       <div className=" stroke-black stroke-1 pb-6 text-[#eee8e8]">
-        <div className="flex min-h-fit w-full flex-col justify-center bg-gray-400 bg-BackgroundImage bg-cover px-3 py-3 bg-blend-multiply lg:h-[28rem] lg:px-10 lg:py-0 xl:h-[30rem] 2xl:h-[34rem]">
+        <div className="flex min-h-fit w-full flex-col justify-center bg-gray-400 bg-BackgroundImage bg-cover px-3 py-3 bg-blend-multiply h-[20rem] lg:h-[28rem] lg:px-10 lg:py-0 xl:h-[30rem] 2xl:h-[34rem]">
           <div className="lg:w-[70%]">
             <h1 className="text-xl font-semibold bg-blend-normal lg:text-2xl xl:text-3xl 2xl:text-5xl">
               Online Quran Learning Platform
@@ -35,8 +35,8 @@ const Landing = () => {
 
         <div className="">
           {/* book and teacher section */}
-          <section className="flex flex-col items-center justify-evenly gap-4 px-6 py-4 text-textPrimaryColor md:flex-row md:gap-2 xl:px-8 xl:py-6 2xl:gap-3 2xl:px-10 2xl:py-8">
-            <div className="flex max-w-[25rem] items-center gap-4 rounded-xl  border border-gray-200 px-2 py-2 shadow-md md:max-w-[31rem] lg:rounded-3xl lg:px-5 lg:py-5 2xl:px-7 2xl:py-9">
+          <section className="flex flex-col items-center justify-evenly gap-4 px-6 text-textPrimaryColor md:flex-row md:gap-2 xl:px-8 2xl:gap-3 2xl:px-10 py-8">
+            <div className="flex max-w-[25rem] items-center gap-4 rounded-xl  border border-gray-200 px-2 py-2 shadow lg:shadow-md md:max-w-[31rem] lg:rounded-3xl lg:px-5 lg:py-5 2xl:px-7 2xl:py-9">
               <Image
                 src={Books}
                 className="w-10 lg:w-16 xl:w-20"
@@ -54,7 +54,7 @@ const Landing = () => {
               </div>
             </div>
 
-            <div className="flex max-w-[25rem] items-center gap-4 rounded-xl border border-gray-200 px-2 py-2 shadow-md md:max-w-[31rem] lg:rounded-3xl lg:px-5 lg:py-5 2xl:px-7 2xl:py-9">
+            <div className="flex max-w-[25rem] items-center gap-4 rounded-xl border border-gray-200 px-2 py-2 shadow lg:shadow-md md:max-w-[31rem] lg:rounded-3xl lg:px-5 lg:py-5 2xl:px-7 2xl:py-9">
               <Image
                 src={Teacher}
                 className="w-10 lg:w-16 xl:w-20"
@@ -75,7 +75,7 @@ const Landing = () => {
           {/* ------book and teacher section end-----*/}
 
           {/* Founder message */}
-          <section className="px-3 py-8 text-textPrimaryColor lg:px-6 xl:px-8 xl:py-12 2xl:px-10 2xl:py-16">
+          <section className="px-3 py-10 text-textPrimaryColor lg:px-6 xl:px-8 xl:py-12 2xl:px-10 2xl:py-16">
             <div className="pb-3 text-center text-xl font-semibold lg:text-2xl xl:pb-4 xl:text-3xl 2xl:pb-6 2xl:text-4xl">
               Message from our Founder{"'"}s
             </div>
