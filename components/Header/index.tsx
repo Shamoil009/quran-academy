@@ -29,7 +29,7 @@ const Header = () => {
         width={100}
         height={100}
         alt="logo"
-        className="w-20 xl:w-24 2xl:w-28"
+        className="w-16 xl:w-20 2xl:w-28"
       />
       <div
         className="cursor-pointer lg:hidden"
@@ -60,14 +60,21 @@ const Header = () => {
           onClick={() => setOpenSidebar(false)}
         >
           <FontAwesomeIcon icon={faXmarkCircle} className="h-6 text-white" />
-          {/* <CancelIcon color="inherit" className="!text-2xl text-white" /> */}
         </div>
 
-        <div className="flex flex-col items-center xl:text-lg gap-4 pt-[10%] text-white lg:ml-auto lg:flex-row lg:pt-0 lg:text-textPrimaryColor">
-          <div>Home</div>
-          <div>About us</div>
-          <div>Courses</div>
-          <div>Contact Us</div>
+        <div className="flex flex-col items-center gap-4 pt-[10%] text-white lg:ml-auto lg:flex-row lg:pt-0 lg:text-base lg:text-textPrimaryColor 2xl:text-lg">
+          <div>
+            <Link href={"/"}>Home</Link>
+          </div>
+          <div>
+            <Link href={"/"}>About us</Link>
+          </div>
+          <div>
+            <Link href={"/"}>Courses</Link>
+          </div>
+          <div>
+            <Link href={"/contact"}>Contact Us</Link>
+          </div>
         </div>
       </div>
     </div>
