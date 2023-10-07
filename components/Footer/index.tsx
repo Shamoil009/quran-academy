@@ -15,18 +15,18 @@ import Logo from "@/public/images/logo.png";
 
 const Footer = () => {
   return (
-    <footer className=" bg-courseBgColor px-5 py-12 text-sm text-FooterColor lg:px-0 2xl:pb-20 2xl:pt-16 2xl:text-base">
+    <footer className=" bg-courseBgColor px-5 py-9 text-sm text-FooterColor lg:px-0 lg:pb-16 lg:pt-12 2xl:pb-20 2xl:pt-16 2xl:text-base">
       <div className="flex  lg:justify-center ">
         <div className="flex flex-col justify-between lg:w-[90%] lg:flex-row 2xl:w-[90%] ">
-          <section className="w-[25%] space-y-2 2xl:space-y-4">
+          <section className="w-[90%] lg:w-[25%] space-y-2 2xl:space-y-4">
             <Image
               src={Logo}
               height={2000}
               width={2000}
-              className="w-20 xl:w-28 2xl:w-32"
+              className="w-20 xl:w-24 2xl:w-32"
               alt=""
             />
-            <div >
+            <div>
               Online Quran Education platform, which provides the facility to
               Learn Islamic and Quranic teachings to Muslim students across the
               world.
@@ -35,19 +35,19 @@ const Footer = () => {
               <div className="duration-300 hover:scale-125 hover:cursor-pointer">
                 <FontAwesomeIcon
                   icon={faInstagram}
-                  className="h-5 w-5 text-[#8a3ab9] lg:h-6 lg:w-6 2xl:h-8 2xl:w-8"
+                  className="h-4 w-4 text-[#8a3ab9] lg:h-5 lg:w-5 2xl:h-7 2xl:w-7"
                 />
               </div>
               <div className="duration-300 hover:scale-125 hover:cursor-pointer">
                 <FontAwesomeIcon
                   icon={faTwitter}
-                  className="h-5 w-5 text-[#00acee] lg:h-6 lg:w-6 2xl:h-8 2xl:w-8"
+                  className="h-4 w-4 text-[#00acee] lg:h-5 lg:w-5 2xl:h-7 2xl:w-7"
                 />
               </div>
               <div className="duration-300 hover:scale-125 hover:cursor-pointer">
                 <FontAwesomeIcon
                   icon={faFacebookF}
-                  className="h-5 w-5 text-[#3b5998] lg:h-6 lg:w-6 2xl:h-8 2xl:w-8"
+                  className="h-4 w-4 text-[#3b5998] lg:h-5 lg:w-5 2xl:h-7 2xl:w-7"
                 />
               </div>
             </div>
@@ -139,7 +139,7 @@ const Footer = () => {
                   icon={faMap}
                   className="mt-1 w-4 text-secondaryColor lg:w-5"
                 />
-                <div className="w-[50%] lg:w-72">
+                <div className="w-[90%] md:w-[50%] lg:w-72">
                   Office No. 09, Al.imran Plaza Near Umania Restaurant Dhok
                   Jelani, Bhara Kahu, Islamabad, Pakistan
                 </div>
@@ -149,7 +149,8 @@ const Footer = () => {
         </div>
       </div>
       <div className="pt-4 text-center">
-        © Copyright 2023 AQquran Academy. All rights reserved.
+        © Copyright {new Date().getFullYear()} AQquran Academy. All rights
+        reserved.
       </div>
     </footer>
   );

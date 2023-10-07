@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { COURSES } from "@/constants/courses";
 import { useSearchParams } from "next/navigation";
+import Link from "next/link";
 
 const CourseDetail = () => {
   const searchParams = useSearchParams();
@@ -21,9 +22,9 @@ const CourseDetail = () => {
 
   return (
     <div>
-      <div className="bg-courseDetail flex h-[34rem] w-full flex-col justify-center bg-cover px-10">
+      <div className="bg-courseDetail flex lg:h-[28rem] xl:h-[30rem] 2xl:h-[34rem] w-full flex-col justify-center bg-cover px-10">
         <div className="w-[70%]">
-          <h1 className="text-5xl font-semibold text-primaryColor bg-blend-normal">
+          <h1 className="text-2xl xl:text-3xl 2xl:text-5xl font-semibold text-primaryColor bg-blend-normal">
             Course Detail
           </h1>
         </div>
@@ -31,27 +32,27 @@ const CourseDetail = () => {
 
       {/* Detail section */}
       {courseDetail !== undefined && (
-        <section className=" flex flex-col items-center py-16 text-3xl text-textPrimaryColor">
+        <section className=" flex flex-col items-center py-16 text-lg xl:text-xl 2xl:text-3xl text-textPrimaryColor">
           <div className="w-[70%]">
-            <h1 className="pb-10 text-center text-5xl font-semibold capitalize underline">
+            <h1 className="pb-10 text-center text-2xl xl:text-3xl 2xl:text-5xl font-semibold capitalize underline">
               {courseDetail?.name}
             </h1>
             {/* <div dangerouslySetInnerHTML={{ __html: COURSES[1].description }} /> */}
             <div className="pt-5 font-medium capitalize leading-relaxed">
               {courseDetail?.description}
             </div>
-            <div className="leading-relaxed">
+            <div className="leading-relaxed pt-2">
               <div>{courseDetail?.classType}</div>
-              <div>Timing: {courseDetail?.timing}</div>
+              <div><span className="font-bold">Timing</span>: {courseDetail?.timing}</div>
               <div>{courseDetail?.test}</div>
             </div>
           </div>
-          <button className="btn-primary my-3">Apply Now</button>
+          <Link href={`/contact?courseId=${courseId}`}><button className="btn-primary my-3">Apply Now</button></Link>
         </section>
       )}
 
       {courseDetail === undefined && (
-        <div className="px-10 py-5 text-3xl text-textPrimaryColor">
+        <div className="px-10 py-5 text-lg xl:text-xl 2xl:text-3xl text-textPrimaryColor">
           No course found
         </div>
       )}

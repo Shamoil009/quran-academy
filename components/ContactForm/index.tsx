@@ -11,24 +11,13 @@ import { faPhone } from "@fortawesome/free-solid-svg-icons/faPhone";
 const ContactForm = () => {
   const searchParams = useSearchParams();
   const courseId = searchParams.get("courseId");
-
-  const [courseDetail, setCourseDetail] = useState<any>("");
-
-  const findCourseById = () => {
-    const idToFindNumber = parseInt(courseId || "");
-    const foundCourse = COURSES.find((course) => course.id === idToFindNumber);
-    return foundCourse;
-  };
-
-  useEffect(() => {
-    setCourseDetail(findCourseById());
-  }, []);
+  console.log(courseId);
 
   return (
     <div>
-      <div className="flex h-[34rem] w-full flex-col justify-center bg-courseDetail bg-cover px-10">
+      <div className="flex w-full flex-col justify-center bg-courseDetail bg-cover px-10 lg:h-[28rem] xl:h-[30rem] 2xl:h-[34rem]">
         <div className="w-[70%]">
-          <h1 className="text-5xl font-semibold text-primaryColor bg-blend-normal">
+          <h1 className="text-2xl font-semibold text-primaryColor bg-blend-normal xl:text-3xl 2xl:text-5xl">
             Contact
           </h1>
         </div>
@@ -36,14 +25,14 @@ const ContactForm = () => {
 
       {/* Detail section */}
 
-      <section className=" flex flex-col items-center py-16 text-textPrimaryColor">
-        <div className="w-[70%] border border-gray-200 bg-courseBgColor shadow-md">
+      <section className=" flex flex-col items-center py-8 text-textPrimaryColor xl:py-10 2xl:py-16">
+        <div className="w-[93%] border border-gray-200 bg-courseBgColor shadow-md xl:w-[80%] 2xl:w-[75%]">
           <div className="flex ">
-            <div className="w-[70%] px-6 py-10">
-              <h1 className="pb-10 text-3xl font-semibold capitalize">
+            <div className="w-[70%] px-3 py-5 xl:px-5 xl:py-7 2xl:px-7 2xl:py-10">
+              <h1 className="pb-5 text-lg font-semibold capitalize xl:pb-7 xl:text-xl 2xl:pb-10 2xl:text-3xl">
                 Contact us
               </h1>
-              <div className=" space-y-14 text-xl">
+              <div className="space-y-6 text-base xl:space-y-8 xl:text-base 2xl:space-y-14 2xl:text-xl">
                 {/* Name, email */}
                 <div className="flex gap-x-7">
                   <div className="w-[50%]">
@@ -91,7 +80,7 @@ const ContactForm = () => {
                 <div>
                   <div className="font-medium">
                     Whatsapp No
-                    <span className="text-base">
+                    <span className="text-sm 2xl:text-base">
                       {" *"}
                       Provide a number whose whatsapp is available
                     </span>
@@ -113,6 +102,7 @@ const ContactForm = () => {
                             type="checkbox"
                             name={value.name}
                             className="accent-primaryColor"
+                            defaultChecked={courseId == value.id}
                           />
                           <div className="min-w-fit">{value.name}</div>
                         </div>
@@ -127,8 +117,10 @@ const ContactForm = () => {
             </div>
 
             {/* second half */}
-            <div className="w-[30%]  bg-primaryColor px-6 py-10 text-gray-200">
-              <div className="text-3xl">Contact Information</div>
+            <div className="w-[30%] bg-primaryColor px-2 py-5 text-sm text-gray-200 xl:px-4 xl:py-7 2xl:px-5 2xl:py-10 2xl:text-base">
+              <div className="text-lg font-semibold xl:text-xl 2xl:text-3xl">
+                Contact Information
+              </div>
               <p className="pt-3">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
                 quam ea nesciunt commodi possimus aliquam cupiditate, tempore

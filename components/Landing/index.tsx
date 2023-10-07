@@ -10,60 +10,63 @@ import Teacher from "@/public/images/teacher.svg";
 import FounderImage from "@/public/images/founder-image.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 const Landing = () => {
   return (
     <div>
       <div className=" stroke-black stroke-1 pb-6 text-[#eee8e8]">
-        <div className="flex min-h-fit w-full flex-col justify-center bg-gray-400 bg-BackgroundImage bg-cover px-10 bg-blend-multiply lg:h-[28rem] xl:h-[30rem] 2xl:h-[34rem]">
-          <div className="w-[70%]">
-            <h1 className="text-2xl font-semibold bg-blend-normal xl:text-3xl 2xl:text-5xl">
+        <div className="flex min-h-fit w-full flex-col justify-center bg-gray-400 bg-BackgroundImage bg-cover px-5 py-3 bg-blend-multiply lg:h-[28rem] lg:px-10 lg:py-0 xl:h-[30rem] 2xl:h-[34rem]">
+          <div className="lg:w-[70%]">
+            <h1 className="text-xl font-semibold bg-blend-normal lg:text-2xl xl:text-3xl 2xl:text-5xl">
               Online Quran Learning Platform
             </h1>
-            <p className="w-[85%] pt-5 text-lg bg-blend-normal xl:text-xl 2xl:text-3xl 2xl:leading-10">
+            <p className="w-[95%] pt-5 text-sm bg-blend-normal lg:w-[85%] lg:text-base xl:text-xl 2xl:text-3xl 2xl:leading-10">
               An Online Quran Education platform, which provides the facility to
               Learn Quran Online Islamic and Quranic teachings to Muslim
               students across the world in four languages: English, Persian,
               Pashto, and Urdu.
             </p>
-            <button className="btn-primary my-5">Register Now</button>
+            <Link href={"/contact"}>
+              <button className="btn-primary my-5">Register Now</button>
+            </Link>
           </div>
         </div>
 
         <div className="">
           {/* book and teacher section */}
-          <section className="flex justify-evenly gap-2 2xl:gap-3 text-textPrimaryColor px-6 xl:px-8 2xl:px-10 py-4 xl:py-6 2xl:py-8">
-            <div className="flex max-w-[31rem] items-center gap-4 rounded-3xl border border-gray-200 px-5 2xl:px-7 py-5 2xl:py-9 shadow-md">
+          <section className="flex flex-col items-center justify-evenly gap-4 px-6 py-4 text-textPrimaryColor md:flex-row md:gap-2 xl:px-8 xl:py-6 2xl:gap-3 2xl:px-10 2xl:py-8">
+            <div className="flex max-w-[25rem] items-center gap-4 rounded-xl  border border-gray-200 px-2 py-2 shadow-md md:max-w-[31rem] lg:rounded-3xl lg:px-5 lg:py-5 2xl:px-7 2xl:py-9">
               <Image
                 src={Books}
-                className="w-16 xl:w-20"
+                className="w-10 lg:w-16 xl:w-20"
                 height={2000}
                 width={2000}
                 alt=""
               />
               <div>
-                <div className="text-lg font-semibold xl:text-xl 2xl:text-3xl">
+                <div className="text-base font-semibold lg:text-lg xl:text-xl 2xl:text-3xl">
                   60+ courses
                 </div>
-                <div className="text-base xl:text-lg 2xl:text-xl font-medium">
+                <div className="text-sm font-medium lg:text-base xl:text-lg 2xl:text-xl">
                   Variety of courses for you to choose
                 </div>
               </div>
             </div>
 
-            <div className="flex max-w-[31rem] items-center gap-4 rounded-3xl border border-gray-200 px-5 2xl:px-7 py-5 2xl:py-9 shadow-md">
+            <div className="flex max-w-[25rem] items-center gap-4 rounded-xl border border-gray-200 px-2 py-2 shadow-md md:max-w-[31rem] lg:rounded-3xl lg:px-5 lg:py-5 2xl:px-7 2xl:py-9">
               <Image
                 src={Teacher}
-                className="w-16 xl:w-20"
+                className="w-10 lg:w-16 xl:w-20"
                 height={2000}
                 width={2000}
                 alt=""
               />
               <div>
-                <div className="text-lg font-semibold xl:text-xl 2xl:text-3xl">
+                <div className="text-base font-semibold lg:text-lg xl:text-xl 2xl:text-3xl">
                   Expert instructors
                 </div>
-                <div className="text-base xl:text-lg 2xl:text-xl font-medium">
+                <div className="text-sm font-medium lg:text-base xl:text-lg 2xl:text-xl">
                   Learn from expert teachers to elivate your skills
                 </div>
               </div>
@@ -72,20 +75,20 @@ const Landing = () => {
           {/* ------book and teacher section end-----*/}
 
           {/* Founder message */}
-          <section className="px-6 xl:px-8 2xl:px-10 py-8 xl:py-12 2xl:py-16 text-textPrimaryColor">
-            <div className="pb-3 xl:pb-4 2xl:pb-6 text-center text-2xl xl:text-3xl 2xl:text-4xl font-semibold">
+          <section className="px-3 py-8 text-textPrimaryColor lg:px-6 xl:px-8 xl:py-12 2xl:px-10 2xl:py-16">
+            <div className="pb-3 text-center text-xl font-semibold lg:text-2xl xl:pb-4 xl:text-3xl 2xl:pb-6 2xl:text-4xl">
               Message from our Founder{"'"}s
             </div>
             <div className="flex w-full justify-center ">
-              <div className="flex w-[90%] xl:w-[80%] 2xl:w-[70%] gap-5 xl:gap-7 2xl:gap-10 p-2 xl:p-3">
+              <div className="flex w-full flex-col items-center gap-5 p-2 lg:w-[90%] lg:flex-row lg:items-start xl:w-[80%] xl:gap-7 xl:p-3 2xl:w-[70%] 2xl:gap-10">
                 <Image
                   src={FounderImage}
-                  className="h-52 w-52 xl:h-60 xl:w-60 2xl:h-72 2xl:w-72 rounded-full object-cover"
+                  className="h-52 w-52 rounded-full object-cover xl:h-60 xl:w-60 2xl:h-72 2xl:w-72"
                   height={2000}
                   width={2000}
                   alt=""
                 />
-                <div className=" text-lg xl:text-xl 2xl:text-2xl ">
+                <div className=" text-base lg:text-lg xl:text-xl 2xl:text-2xl ">
                   <div className=" py-5 font-medium 2xl:leading-10">
                     The Holy Quran is the final message from Allah Almighty to
                     all of humanity. It is a blessed scripture that is recited
@@ -108,11 +111,11 @@ const Landing = () => {
           {/* ----founder message end */}
 
           {/* Courses Section */}
-          <section className=" bg-courseBgColor px-6 xl:px-8 2xl:px-10 py-8 xl:py-14 2xl:py-20 text-textPrimaryColor">
-            <div className="pb-12 text-center text-2xl xl:text-3xl 2xl:text-4xl font-semibold">
+          <section className=" bg-courseBgColor px-6 py-8 text-textPrimaryColor xl:px-8 xl:py-14 2xl:px-10 2xl:py-20">
+            <div className="pb-12 text-center text-xl font-semibold lg:text-2xl xl:text-3xl 2xl:text-4xl">
               Our featured courses
             </div>
-            <div className="flex flex-wrap justify-between gap-x-2 2xl:gap-x-3 gap-y-14">
+            <div className="flex flex-wrap justify-center gap-x-2 gap-y-14 sm:justify-between 2xl:gap-x-3">
               {COURSES.map((value: any, index: number) => {
                 return (
                   <CourseCard
@@ -129,25 +132,25 @@ const Landing = () => {
           </section>
 
           {/* about us */}
-          <section className=" flex flex-col items-center pt-10 xl:pt-16 2xl:pt-24 text-textPrimaryColor">
-            <div className="pb-8 text-center text-2xl xl:text-3xl 2xl:text-4xl font-semibold">
+          <section className=" flex flex-col items-center pt-10 text-textPrimaryColor xl:pt-16 2xl:pt-24">
+            <div className="pb-8 text-center text-xl font-semibold lg:text-2xl xl:text-3xl 2xl:text-4xl">
               Why us?
             </div>
-            <div className="flex w-[95%] xl:w-[90%] items-center gap-4 xl:gap-7 2xl:gap-10">
-              <div className="w-[45%] p-3">
+            <div className="flex w-full flex-col gap-4 sm:w-[98%] sm:flex-row sm:items-center lg:w-[95%] xl:w-[90%] xl:gap-7 2xl:gap-10">
+              <div className="w-full sm:w-[50%] md:w-[45%] md:p-3">
                 <Image
                   src={WhyUs}
-                  className=" w-full rounded-lg"
+                  className=" w-full sm:rounded-lg"
                   height={2000}
                   width={2000}
                   alt=""
                 />
               </div>
-              <div className="w-[50%] text-lg xl:text-xl 2xl:text-2xl">
-                <div className="text-2xl xl:text-3xl 2xl:text-4xl font-semibold">
+              <div className="w-full px-3 text-base sm:w-[50%] sm:px-0 lg:text-lg xl:text-xl 2xl:text-2xl">
+                <div className="text-xl font-semibold lg:text-2xl xl:text-3xl 2xl:text-4xl">
                   Quran Education for all
                 </div>
-                <div className=" py-3 2xl:py-5 font-medium lg:leading-10">
+                <div className=" py-3 font-medium lg:leading-10 2xl:py-5">
                   Alquran Academy is an Online Quran Education platform, which
                   provides the facility to Learn Quran Online Islamic and Qur
                   {`'`}anic teachings to Muslim students across the world. As a
@@ -157,7 +160,7 @@ const Landing = () => {
                   Quran. Initially, we offer a course named Nazirah Qur
                   {`'`}an with Tajweed.
                 </div>
-                <ol className="space-y-1 2xl:space-y-2 font-medium">
+                <ol className="space-y-1 font-medium 2xl:space-y-2">
                   <li className="flex items-center gap-2 2xl:gap-3">
                     <FontAwesomeIcon
                       icon={faCheck}
