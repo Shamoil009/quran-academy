@@ -15,8 +15,8 @@ const ContactForm = () => {
 
   return (
     <div>
-      <div className="flex w-full flex-col justify-center bg-courseDetail bg-cover px-10 lg:h-[28rem] xl:h-[30rem] 2xl:h-[34rem]">
-        <div className="w-[70%]">
+      <div className="flex w-full flex-col justify-center bg-courseDetail bg-cover px-10 h-[17rem] lg:h-[28rem] xl:h-[30rem] 2xl:h-[34rem]">
+        <div className="lg:w-[70%]">
           <h1 className="text-2xl font-semibold text-primaryColor bg-blend-normal xl:text-3xl 2xl:text-5xl">
             Contact
           </h1>
@@ -28,14 +28,14 @@ const ContactForm = () => {
       <section className=" flex flex-col items-center py-8 text-textPrimaryColor xl:py-10 2xl:py-16">
         <div className="w-[93%] border border-gray-200 bg-courseBgColor shadow-md xl:w-[80%] 2xl:w-[75%]">
           <div className="flex ">
-            <div className="w-[70%] px-3 py-5 xl:px-5 xl:py-7 2xl:px-7 2xl:py-10">
+            <div className="w-full lg:w-[70%] px-3 py-5 xl:px-5 xl:py-7 2xl:px-7 2xl:py-10">
               <h1 className="pb-5 text-lg font-semibold capitalize xl:pb-7 xl:text-xl 2xl:pb-10 2xl:text-3xl">
                 Contact us
               </h1>
-              <div className="space-y-6 text-base xl:space-y-8 xl:text-base 2xl:space-y-14 2xl:text-xl">
+              <div className="space-y-6 text-sm md:text-base xl:space-y-8 xl:text-base 2xl:space-y-14 2xl:text-xl">
                 {/* Name, email */}
-                <div className="flex gap-x-7">
-                  <div className="w-[50%]">
+                <div className="flex flex-col lg:flex-row gap-y-3 gap-x-7">
+                  <div className="w-full sm:w-[70%] lg:w-[50%]">
                     <div className="font-medium">Name</div>
                     <input
                       type="text"
@@ -44,7 +44,7 @@ const ContactForm = () => {
                       placeholder="Your name"
                     />
                   </div>
-                  <div className="w-[50%]">
+                  <div className="w-full sm:w-[70%] lg:w-[50%]">
                     <div className="font-medium">Email</div>
                     <input
                       type="text"
@@ -55,8 +55,8 @@ const ContactForm = () => {
                   </div>
                 </div>
 
-                <div className="flex items-end gap-x-7">
-                  <div className="w-[50%]">
+                <div className="flex lg:items-end flex-col lg:flex-row gap-y-3 gap-x-7">
+                  <div className="w-full sm:w-[70%] lg:w-[50%]">
                     <div className="font-medium">Gender</div>
                     <select
                       name=""
@@ -67,7 +67,7 @@ const ContactForm = () => {
                       <option>Rather not say</option>
                     </select>
                   </div>
-                  <div className="w-[50%]">
+                  <div className="w-full sm:w-[70%] lg:w-[50%]">
                     <div className="font-medium">Country</div>
                     <input
                       type="text"
@@ -80,7 +80,7 @@ const ContactForm = () => {
                 <div>
                   <div className="font-medium">
                     Whatsapp No
-                    <span className="text-sm 2xl:text-base">
+                    <span className="text-xs lg:text-sm 2xl:text-base">
                       {" *"}
                       Provide a number whose whatsapp is available
                     </span>
@@ -94,7 +94,7 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <div className="font-medium">Choose Course(s)</div>
-                  <div className="grid grid-cols-2 pt-2">
+                  <div className="grid grid-cols-1 md:grid-cols-2 pt-2">
                     {COURSES.map((value: any, index: number) => {
                       return (
                         <div key={index} className="flex gap-2 py-1">
@@ -117,7 +117,7 @@ const ContactForm = () => {
             </div>
 
             {/* second half */}
-            <div className="w-[30%] bg-primaryColor px-2 py-5 text-sm text-gray-200 xl:px-4 xl:py-7 2xl:px-5 2xl:py-10 2xl:text-base">
+            <div className="hidden lg:block w-[30%] bg-primaryColor px-2 py-5 text-sm text-gray-200 xl:px-4 xl:py-7 2xl:px-5 2xl:py-10 2xl:text-base">
               <div className="text-lg font-semibold xl:text-xl 2xl:text-3xl">
                 Contact Information
               </div>

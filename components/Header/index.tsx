@@ -62,11 +62,19 @@ const Header = () => {
           <FontAwesomeIcon icon={faXmarkCircle} className="h-6 text-white" />
         </div>
 
-        <div className="flex flex-col items-center lg:text-base 2xl:text-lg gap-4 pt-[10%] text-white lg:ml-auto lg:flex-row lg:pt-0 lg:text-textPrimaryColor">
-          <div>Home</div>
-          <div>About us</div>
-          <div>Courses</div>
-          <div>Contact Us</div>
+        <div className="flex flex-col items-center gap-4 pt-[10%] text-white lg:ml-auto lg:flex-row lg:pt-0 lg:text-base lg:text-textPrimaryColor 2xl:text-lg">
+          <div>
+            <Link href={"/"}>Home</Link>
+          </div>
+          <div>
+            <Link href={"/"}>About us</Link>
+          </div>
+          <div>
+            <Link href={"/"}>Courses</Link>
+          </div>
+          <div>
+            <Link href={"/contact"}>Contact Us</Link>
+          </div>
         </div>
       </div>
     </div>

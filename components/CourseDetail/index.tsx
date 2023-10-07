@@ -22,8 +22,8 @@ const CourseDetail = () => {
 
   return (
     <div>
-      <div className="bg-courseDetail flex lg:h-[28rem] xl:h-[30rem] 2xl:h-[34rem] w-full flex-col justify-center bg-cover px-10">
-        <div className="w-[70%]">
+      <div className="bg-courseDetail flex h-[17rem] lg:h-[28rem] xl:h-[30rem] 2xl:h-[34rem] w-full flex-col justify-center bg-cover px-3 lg:px-10">
+        <div className="lg:w-[70%]">
           <h1 className="text-2xl xl:text-3xl 2xl:text-5xl font-semibold text-primaryColor bg-blend-normal">
             Course Detail
           </h1>
@@ -32,9 +32,9 @@ const CourseDetail = () => {
 
       {/* Detail section */}
       {courseDetail !== undefined && (
-        <section className=" flex flex-col items-center py-16 text-lg xl:text-xl 2xl:text-3xl text-textPrimaryColor">
-          <div className="w-[70%]">
-            <h1 className="pb-10 text-center text-2xl xl:text-3xl 2xl:text-5xl font-semibold capitalize underline">
+        <section className=" flex flex-col items-center  py-8 xl:py-12 2xl:py-16 text-base lg:text-lg xl:text-xl 2xl:text-3xl text-textPrimaryColor">
+          <div className="w-[88%] md:w-[70%]">
+            <h1 className="pb-5 lg:pb-7 2xl:pb-10 text-center text-xl lg:text-2xl xl:text-3xl 2xl:text-5xl font-semibold capitalize underline">
               {courseDetail?.name}
             </h1>
             {/* <div dangerouslySetInnerHTML={{ __html: COURSES[1].description }} /> */}

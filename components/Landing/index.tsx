@@ -16,7 +16,7 @@ const Landing = () => {
   return (
     <div>
       <div className=" stroke-black stroke-1 pb-6 text-[#eee8e8]">
-        <div className="flex min-h-fit w-full flex-col justify-center bg-gray-400 bg-BackgroundImage bg-cover px-5 py-3 bg-blend-multiply lg:h-[28rem] lg:px-10 lg:py-0 xl:h-[30rem] 2xl:h-[34rem]">
+        <div className="flex min-h-fit w-full flex-col justify-center bg-gray-400 bg-BackgroundImage bg-cover px-3 py-3 bg-blend-multiply lg:h-[28rem] lg:px-10 lg:py-0 xl:h-[30rem] 2xl:h-[34rem]">
           <div className="lg:w-[70%]">
             <h1 className="text-xl font-semibold bg-blend-normal lg:text-2xl xl:text-3xl 2xl:text-5xl">
               Online Quran Learning Platform
