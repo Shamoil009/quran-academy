@@ -15,7 +15,7 @@ const ContactForm = () => {
 
   return (
     <div>
-      <div className="flex w-full flex-col justify-center bg-courseDetail bg-cover px-10 h-[17rem] lg:h-[28rem] xl:h-[30rem] 2xl:h-[34rem]">
+      <div className="flex w-full flex-col justify-center bg-courseDetail bg-cover px-3 lg:px-10 h-[17rem] lg:h-[28rem] xl:h-[30rem] 2xl:h-[34rem]">
         <div className="lg:w-[70%]">
           <h1 className="text-2xl font-semibold text-primaryColor bg-blend-normal xl:text-3xl 2xl:text-5xl">
             Contact

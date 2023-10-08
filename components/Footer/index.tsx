@@ -31,23 +31,23 @@ const Footer = () => {
               Learn Islamic and Quranic teachings to Muslim students across the
               world.
             </div>
-            <div className="flex space-x-5 pt-2">
+            <div className="flex space-x-8 lg:space-x-6 pt-2">
               <div className="duration-300 hover:scale-125 hover:cursor-pointer">
                 <FontAwesomeIcon
                   icon={faInstagram}
-                  className="h-4 w-4 text-[#8a3ab9] lg:h-5 lg:w-5 2xl:h-7 2xl:w-7"
+                  className="h-5 text-[#8a3ab9] 2xl:h-7"
                 />
               </div>
               <div className="duration-300 hover:scale-125 hover:cursor-pointer">
                 <FontAwesomeIcon
                   icon={faTwitter}
-                  className="h-4 w-4 text-[#00acee] lg:h-5 lg:w-5 2xl:h-7 2xl:w-7"
+                  className="h-5 text-[#00acee] 2xl:h-7"
                 />
               </div>
               <div className="duration-300 hover:scale-125 hover:cursor-pointer">
                 <FontAwesomeIcon
                   icon={faFacebookF}
-                  className="h-4 w-4 text-[#3b5998] lg:h-5 lg:w-5 2xl:h-7 2xl:w-7"
+                  className="h-5 text-[#3b5998] 2xl:h-7"
                 />
               </div>
             </div>
