@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import CourseCard from "../CourseCard";
-import { COURSES } from "@/constants/courses";
+import { CHOOSEUS, COURSES } from "@/constants/courses";
 
 import PageTop from "@/public/images/ramadan.jpg";
 import WhyUs from "@/public/images/why-us.jpg";
@@ -11,12 +11,13 @@ import FounderImage from "@/public/images/founder-image.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+import WhyUsCard from "../WhyUsCard";
 
 const Landing = () => {
   return (
     <div>
       <div className=" stroke-black stroke-1 pb-6 text-[#eee8e8]">
-        <div className="flex min-h-fit w-full flex-col justify-center bg-gray-400 bg-BackgroundImage bg-cover px-3 py-3 bg-blend-multiply lg:h-[28rem] lg:px-10 lg:py-0 xl:h-[30rem] 2xl:h-[34rem]">
+        <div className="flex h-[20rem] min-h-fit w-full flex-col justify-center bg-gray-400 bg-BackgroundImage bg-cover px-3 py-3 bg-blend-multiply lg:h-[28rem] lg:px-10 lg:py-0 xl:h-[30rem] 2xl:h-[34rem]">
           <div className="lg:w-[70%]">
             <h1 className="text-xl font-semibold bg-blend-normal lg:text-2xl xl:text-3xl 2xl:text-5xl">
               Online Quran Learning Platform
@@ -35,8 +36,8 @@ const Landing = () => {
 
         <div className="">
           {/* book and teacher section */}
-          <section className="flex flex-col items-center justify-evenly gap-4 px-6 py-4 text-textPrimaryColor md:flex-row md:gap-2 xl:px-8 xl:py-6 2xl:gap-3 2xl:px-10 2xl:py-8">
-            <div className="flex max-w-[25rem] items-center gap-4 rounded-xl  border border-gray-200 px-2 py-2 shadow-md md:max-w-[31rem] lg:rounded-3xl lg:px-5 lg:py-5 2xl:px-7 2xl:py-9">
+          <section className="flex flex-col items-center justify-evenly gap-4 px-6 py-8 text-textPrimaryColor md:flex-row md:gap-2 xl:px-8 2xl:gap-3 2xl:px-10">
+            <div className="flex max-w-[25rem] items-center gap-4 rounded-xl  border border-gray-200 px-2 py-2 shadow md:max-w-[31rem] lg:rounded-3xl lg:px-5 lg:py-5 lg:shadow-md 2xl:px-7 2xl:py-9">
               <Image
                 src={Books}
                 className="w-10 lg:w-16 xl:w-20"
@@ -54,7 +55,7 @@ const Landing = () => {
               </div>
             </div>
 
-            <div className="flex max-w-[25rem] items-center gap-4 rounded-xl border border-gray-200 px-2 py-2 shadow-md md:max-w-[31rem] lg:rounded-3xl lg:px-5 lg:py-5 2xl:px-7 2xl:py-9">
+            <div className="flex max-w-[25rem] items-center gap-4 rounded-xl border border-gray-200 px-2 py-2 shadow md:max-w-[31rem] lg:rounded-3xl lg:px-5 lg:py-5 lg:shadow-md 2xl:px-7 2xl:py-9">
               <Image
                 src={Teacher}
                 className="w-10 lg:w-16 xl:w-20"
@@ -75,7 +76,7 @@ const Landing = () => {
           {/* ------book and teacher section end-----*/}
 
           {/* Founder message */}
-          <section className="px-3 py-8 text-textPrimaryColor lg:px-6 xl:px-8 xl:py-12 2xl:px-10 2xl:py-16">
+          <section className="px-3 py-10 text-textPrimaryColor lg:px-6 xl:px-8 xl:py-12 2xl:px-10 2xl:py-16">
             <div className="pb-3 text-center text-xl font-semibold lg:text-2xl xl:pb-4 xl:text-3xl 2xl:pb-6 2xl:text-4xl">
               Message from our Founder{"'"}s
             </div>
@@ -125,6 +126,7 @@ const Landing = () => {
                     image={value.image}
                     classType={value.classType}
                     timing={value.timing}
+                    price={value.price}
                   />
                 );
               })}
@@ -134,7 +136,7 @@ const Landing = () => {
           {/* about us */}
           <section className=" flex flex-col items-center pt-10 text-textPrimaryColor xl:pt-16 2xl:pt-24">
             <div className="pb-8 text-center text-xl font-semibold lg:text-2xl xl:text-3xl 2xl:text-4xl">
-              Why us?
+              About Us
             </div>
             <div className="flex w-full flex-col gap-4 sm:w-[98%] sm:flex-row sm:items-center lg:w-[95%] xl:w-[90%] xl:gap-7 2xl:gap-10">
               <div className="w-full sm:w-[50%] md:w-[45%] md:p-3">
@@ -198,6 +200,26 @@ const Landing = () => {
                   </li>
                 </ol>
               </div>
+            </div>
+          </section>
+          {/* ----about us end */}
+
+          {/* about us */}
+          <section className="flex flex-col items-center px-2 pt-10 text-textPrimaryColor xl:pt-16 2xl:pt-24">
+            <div className="pb-8 text-center text-xl font-semibold lg:text-2xl xl:text-3xl 2xl:text-4xl">
+              Why Choose Us
+            </div>
+            <div className="grid-col-1 grid sm:grid-cols-2 lg:grid-cols-3">
+              {CHOOSEUS.map((value: any, index: number) => {
+                return (
+                  <WhyUsCard
+                    key={index}
+                    name={value.name}
+                    description={value.description}
+                    index={index}
+                  />
+                );
+              })}
             </div>
           </section>
           {/* ----about us end */}

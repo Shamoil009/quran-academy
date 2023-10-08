@@ -2,6 +2,7 @@ const COURSES = [
   {
     id: 1,
     name: "Basic quran tajweed",
+    price: "50",
     image: "/images/courses-images/1.jpg",
     description: "",
     timing: "30 Minutes",
@@ -11,6 +12,7 @@ const COURSES = [
   {
     id: 2,
     name: "Basic nazara with tajweed",
+    price: "50",
     image: "/images/courses-images/2.jpg",
     description:
       "The Basic Nazara Course with Tajweed is an excellent starting point for those who are new to reading the Quran and want to learn how to read it with proper Tajweed rules. It covers a comprehensive syllabus that includes important Islamic practices and teachings such as MadniQaida/Noorani Qaida/Asan Qaida /Ahsan_ul_Quran with Tajweed, Nazra Quran with Tajweed, 6 Kalmas, Namaz and Tareeqa Namaz, Duas, Ayat_ul_Kursi, Dua_e_Qanoot, Iman_e_Mufassal, Iman_e_Mujmal, Namaz Janaza, Asma-ul-Husna, Wazu ka Tareeqa, Chusal ka Treeqa, Para 30 full Hifz and (Surat-e-Kahaf, Surat-e-Yaseen, Surat-e- Rehman, Surat-e-Mulk Full Hifz). Basic Islamic Book for children. and more, making it an ideal course for beginners.",
@@ -21,6 +23,7 @@ const COURSES = [
   {
     id: 3,
     name: "Quran memorization",
+    price: "85",
     image: "/images/courses-images/3.jpg",
 
     description:
@@ -32,6 +35,7 @@ const COURSES = [
   {
     id: 4,
     name: "Quran translation with tafseer",
+    price: "65",
     image: "/images/courses-images/4.jpg",
 
     description:
@@ -43,6 +47,7 @@ const COURSES = [
   {
     id: 5,
     name: "Basic fiqah course",
+    price: "65",
     image: "/images/courses-images/5.jpg",
 
     description:
@@ -54,6 +59,7 @@ const COURSES = [
   {
     id: 6,
     name: "Basic islamic history",
+    price: "65",
     image: "/images/courses-images/6.jpg",
 
     description:
@@ -65,6 +71,7 @@ const COURSES = [
   {
     id: 7,
     name: "Basic arabic language",
+    price: "65",
     image: "/images/courses-images/7.jpg",
 
     description:
@@ -76,6 +83,7 @@ const COURSES = [
   {
     id: 8,
     name: "Darse nazami",
+    price: "65",
     image: "/images/courses-images/8.jpg",
 
     description:
@@ -87,6 +95,7 @@ const COURSES = [
   {
     id: 9,
     name: "Seerat-e-mustafa",
+    price: "65",
     image: "/images/courses-images/9.jpg",
 
     description:
@@ -98,6 +107,7 @@ const COURSES = [
   {
     id: 10,
     name: "Basic hadith",
+    price: "65",
     image: "/images/courses-images/10.jpg",
 
     description:
@@ -109,6 +119,7 @@ const COURSES = [
   {
     id: 11,
     name: "Qasas-ul-quran",
+    price: "65",
     image: "/images/courses-images/11.jpg",
 
     description:
@@ -120,6 +131,7 @@ const COURSES = [
   {
     id: 12,
     name: "Qasas-ul-anbiya",
+    price: "65",
     image: "/images/courses-images/12.jpg",
 
     description:
@@ -130,4 +142,37 @@ const COURSES = [
   },
 ];
 
-export { COURSES };
+const CHOOSEUS = [
+  {
+    name: "expert quran tutor",
+    description:
+      "All the Classes of online teaching are cunducted by well qualified Islamic Scholars and Expert Quran Tutors who will teach you the recitation of Quran as per Arabic Phonetics.",
+  },
+  {
+    name: "we value our students",
+    description:
+      "We value each and every student and that is why every student is being taught by a teacher individually so that student can learn everything in an efficient manner.",
+  },
+  {
+    name: "male female teachers",
+    description:
+      "We have many well qualified and expert male and female Quran Tutors and as per the nings of Sharia we offer seprate teachers for male and female students accordingly.",
+  },
+  {
+    name: "flexible timings",
+    description:
+      "We are online 24/7 So, Muslims from all around the world can select online Quran Classes timings as per their conformity and availablity.",
+  },
+  {
+    name: "7 days free trial",
+    description:
+      "We have many years of experience in online Quran Teaching, We value our clients and thats why we offer a free trial of 1 Week so you can evaluate our teaching skills.",
+  },
+  {
+    name: "Certificate",
+    description:
+      "We provide certificate to our students who successfully complete their online Quran Courses",
+  },
+];
+
+export { COURSES ,CHOOSEUS};
