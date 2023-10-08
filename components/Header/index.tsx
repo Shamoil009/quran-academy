@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 // import CancelIcon from "@mui/icons-material/Cancel";
 
@@ -12,14 +12,16 @@ import { faXmarkCircle } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   const router = useRouter();
+  const pathname = usePathname();
 
   const [openSidebar, setOpenSidebar] = useState(false);
-  const handleSignIn = () => {
-    router.push("login");
-  };
 
-  const handleSignUp = () => {
-    router.push("sign-up");
+  const currentRoute = pathname.slice(pathname.lastIndexOf("/") + 1);
+  console.log(currentRoute);
+
+  const activeRoute = (route: string) => {
+    if (route === currentRoute) return true;
+    else return false;
   };
 
   return (
@@ -62,18 +64,39 @@ const Header = () => {
           <FontAwesomeIcon icon={faXmarkCircle} className="h-6 text-white" />
         </div>
 
-        <div className="flex flex-col items-center gap-4 pt-[10%] text-white lg:ml-auto lg:flex-row lg:pt-0 lg:text-base lg:text-textPrimaryColor 2xl:text-lg">
+        <div className="flex flex-col items-center gap-4 pt-[10%] font-medium text-white lg:ml-auto lg:flex-row lg:pt-0 lg:text-base lg:font-semibold lg:text-textPrimaryColor 2xl:text-lg">
           <div>
-            <Link href={"/"}>Home</Link>
+            <Link
+              href={"/"}
+              className={`${
+                activeRoute("") && "border-b-2 lg:text-secondaryColor "
+              } border-tertiaryColor py-1 hover:text-secondaryColor lg:border-secondaryColor`}
+            >
+              Home
+            </Link>
           </div>
           <div>
             <Link href={"/"}>About us</Link>
           </div>
           <div>
-            <Link href={"/"}>Courses</Link>
+            <Link
+              href={"/"}
+              className={`${
+                activeRoute("courses") && "border-b-2 lg:text-secondaryColor "
+              } border-tertiaryColor py-1 hover:text-secondaryColor lg:border-secondaryColor`}
+            >
+              Courses
+            </Link>
           </div>
           <div>
-            <Link href={"/contact"}>Contact Us</Link>
+            <Link
+              href={"/contact"}
+              className={`${
+                activeRoute("contact") && "border-b-2 lg:text-secondaryColor"
+              } border-tertiaryColor py-1 hover:text-secondaryColor lg:border-secondaryColor`}
+            >
+              Contact Us
+            </Link>
           </div>
         </div>
       </div>

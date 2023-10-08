@@ -16,7 +16,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`scroll-smooth ${inter.className}`}>{children}</body>
+      <body 
+      // className={`scroll-smooth ${inter.className}`}
+      className={`scroll-smooth font-Inter`}
+      
+      >{children}</body>
     </html>
   );
 }

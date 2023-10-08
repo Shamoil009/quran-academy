@@ -125,6 +125,7 @@ const Landing = () => {
                     image={value.image}
                     classType={value.classType}
                     timing={value.timing}
+                    price={value.price}
                   />
                 );
               })}
@@ -134,7 +135,7 @@ const Landing = () => {
           {/* about us */}
           <section className=" flex flex-col items-center pt-10 text-textPrimaryColor xl:pt-16 2xl:pt-24">
             <div className="pb-8 text-center text-xl font-semibold lg:text-2xl xl:text-3xl 2xl:text-4xl">
-              Why us?
+              About Us
             </div>
             <div className="flex w-full flex-col gap-4 sm:w-[98%] sm:flex-row sm:items-center lg:w-[95%] xl:w-[90%] xl:gap-7 2xl:gap-10">
               <div className="w-full sm:w-[50%] md:w-[45%] md:p-3">
@@ -199,6 +200,17 @@ const Landing = () => {
                 </ol>
               </div>
             </div>
+          </section>
+          {/* ----about us end */}
+
+           {/* about us */}
+           <section className=" flex flex-col items-center pt-10 text-textPrimaryColor xl:pt-16 2xl:pt-24">
+            <div className="pb-8 text-center text-xl font-semibold lg:text-2xl xl:text-3xl 2xl:text-4xl">
+              Why Choose Us
+            </div>
+          <div>
+            
+          </div>
           </section>
           {/* ----about us end */}
         </div>

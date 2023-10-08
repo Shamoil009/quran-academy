@@ -45,6 +45,8 @@ const CourseDetail = () => {
               <div>{courseDetail?.classType}</div>
               <div><span className="font-bold">Timing</span>: {courseDetail?.timing}</div>
               <div>{courseDetail?.test}</div>
+              <div><span className="font-bold">Price</span>: {courseDetail?.price}$</div>
+
             </div>
           </div>
           <Link href={`/contact?courseId=${courseId}`}><button className="btn-primary my-3">Apply Now</button></Link>
