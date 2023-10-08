@@ -144,35 +144,35 @@ const COURSES = [
 
 const CHOOSEUS = [
   {
-    name: "EXPERT QURAN TUTOR",
+    name: "expert quran tutor",
     description:
       "All the Classes of online teaching are cunducted by well qualified Islamic Scholars and Expert Quran Tutors who will teach you the recitation of Quran as per Arabic Phonetics.",
   },
   {
-    name: "WE VALUE OUR STUDENTS",
+    name: "we value our students",
     description:
       "We value each and every student and that is why every student is being taught by a teacher individually so that student can learn everything in an efficient manner.",
   },
   {
-    name: "MALE FEMALE TEACHERS",
+    name: "male female teachers",
     description:
       "We have many well qualified and expert male and female Quran Tutors and as per the nings of Sharia we offer seprate teachers for male and female students accordingly.",
   },
   {
-    name: "FLEXIBLE TIMINGS",
+    name: "flexible timings",
     description:
       "We are online 24/7 So, Muslims from all around the world can select online Quran Classes timings as per their conformity and availablity.",
   },
   {
-    name: "7 DAYS FREE TRIAL",
+    name: "7 days free trial",
     description:
       "We have many years of experience in online Quran Teaching, We value our clients and thats why we offer a free trial of 1 Week so you can evaluate our teaching skills.",
   },
   {
     name: "Certificate",
     description:
-      "We provide certificate o our students who successfully complete their online Quran Courses",
+      "We provide certificate to our students who successfully complete their online Quran Courses",
   },
 ];
 
-export { COURSES };
+export { COURSES ,CHOOSEUS};

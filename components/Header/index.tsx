@@ -75,12 +75,12 @@ const Header = () => {
               Home
             </Link>
           </div>
-          <div>
+          {/* <div>
             <Link href={"/"}>About us</Link>
-          </div>
+          </div> */}
           <div>
             <Link
-              href={"/"}
+              href={"/courses"}
               className={`${
                 activeRoute("courses") && "border-b-2 lg:text-secondaryColor "
               } border-tertiaryColor py-1 hover:text-secondaryColor lg:border-secondaryColor`}
