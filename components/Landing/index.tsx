@@ -11,6 +11,7 @@ import FounderImage from "@/public/images/founder-image.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+import WhyUsCard from "../WhyUsCard";
 
 const Landing = () => {
   return (
@@ -209,7 +210,7 @@ const Landing = () => {
               Why Choose Us
             </div>
           <div>
-            
+            <WhyUsCard/>
           </div>
           </section>
           {/* ----about us end */}

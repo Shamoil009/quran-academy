@@ -37,17 +37,10 @@ const CourseCard = ({ id, name, timing, classType, image, price }: Props) => {
           {name}
         </div>
 
-          
         <div className="flex justify-center px-2 py-2 xl:py-3 2xl:py-4">
           <button onClick={viewCourseHandler} className="btn-secondary">
             view details
           </button>
-          {/* <picture>
-            <source type="image/webp" srcSet="flower.webp"/>
-            <source type="image/jpeg" srcSet="flower.jpg"/>
-            <img src="flower.jpg" alt=""/>
-
-          </picture> */}
         </div>
       </div>
     </div>
