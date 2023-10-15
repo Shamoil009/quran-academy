@@ -6,7 +6,7 @@
 
 
 @layer components {
- 
+
   .btn-primary {
     @apply text-white text-xs md:text-sm 2xl:text-base font-medium px-4 lg:px-5 2xl:px-8 py-3 lg:py-4 rounded-lg bg-primaryColor hover:bg-primaryHover
   }
@@ -23,4 +23,29 @@
     @apply flex items-center rounded-md border border-black bg-white px-6 py-2 text-center text-sm font-medium text-textSecondaryColor hover:text-white hover:bg-gray-700 2xl:px-8 2xl:py-3;
   }
 
+}
+
+td,
+th {
+  padding: 6px 4px 6px 4px;
+  border: 1px solid rgb(185, 189, 196);
+}
+
+@media screen and (min-width: 1200px) {
+
+  td,
+  th {
+    padding: 8px 5px 8px 5px;
+    border: 1px solid rgb(185, 189, 196);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+
+  td,
+  th {
+    padding: 10px 8px 10px 8px;
+
+    border: 1px solid rgb(185, 189, 196);
+  }
 }
