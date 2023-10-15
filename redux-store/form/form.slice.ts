@@ -16,7 +16,6 @@ const initialState: IformState = {
   },
   formError: {},
   formSuccessMesssage: "",
-
   isFormActivityInProgress: false,
 };
 
