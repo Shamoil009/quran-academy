@@ -68,6 +68,7 @@ const Header = () => {
           <div>
             <Link
               href={"/"}
+              onClick={() => setOpenSidebar(false)}
               className={`${
                 activeRoute("") && "border-b-2 lg:text-secondaryColor "
               } border-tertiaryColor py-1 hover:text-secondaryColor lg:border-secondaryColor`}
@@ -81,6 +82,7 @@ const Header = () => {
           <div>
             <Link
               href={"/courses"}
+              onClick={() => setOpenSidebar(false)}
               className={`${
                 activeRoute("courses") && "border-b-2 lg:text-secondaryColor "
               } border-tertiaryColor py-1 hover:text-secondaryColor lg:border-secondaryColor`}
@@ -91,6 +93,7 @@ const Header = () => {
           <div>
             <Link
               href={"/contact"}
+              onClick={() => setOpenSidebar(false)}
               className={`${
                 activeRoute("contact") && "border-b-2 lg:text-secondaryColor"
               } border-tertiaryColor py-1 hover:text-secondaryColor lg:border-secondaryColor`}

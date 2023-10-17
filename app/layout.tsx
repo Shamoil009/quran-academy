@@ -1,4 +1,8 @@
 import "./globals.css";
+import { Providers } from "@/redux-store/provider";
+import { useSelector, useDispatch } from "react-redux";
+import { AppDispatch, store } from "@/redux-store/store";
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
@@ -16,11 +20,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body 
-      // className={`scroll-smooth ${inter.className}`}
-      className={`scroll-smooth font-Inter`}
-      
-      >{children}</body>
+      <body
+        // className={`scroll-smooth ${inter.className}`}
+        className={`scroll-smooth font-Inter`}
+      >
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
