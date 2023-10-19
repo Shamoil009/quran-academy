@@ -1,15 +1,14 @@
 import CourseDetail from "@/components/CourseDetail";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import Layout from "@/components/Layout";
 import React from "react";
 
 const page = () => {
   return (
-    <React.Fragment>
-      <Header />
+    <Layout>
       <CourseDetail />
-      <Footer/>
-    </React.Fragment>
+    </Layout>
   );
 };
 
