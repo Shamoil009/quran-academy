@@ -1,6 +1,21 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch } from "@/redux-store/store";
+
+// import { error } from "@/redux-store/auth/auth.selector";
+import { allForm } from "@/redux-store/form/form.selector";
+import { getAllForm } from "@/redux-store/form/form.slice";
+import FormValue from "./FormValue";
 
 const Admin = () => {
+  const dispatch = useDispatch<AppDispatch>();
+  const formData = useSelector(allForm);
+
+  useEffect(() => {
+    dispatch(getAllForm(1));
+  }, []);
+
   return (
     <div className="flex h-screen w-full">
       {/* ---sidebar--- */}
@@ -9,7 +24,7 @@ const Admin = () => {
       </div>
       {/* ---sidebar end--- */}
       <div className="w-[20%]" />
-      <div className="w-[80%] px-3 2xl:px-5 pt-5 text-xs xl:text-base 2xl:text-xl">
+      <div className="w-[80%] px-3 py-5 text-xs xl:text-base 2xl:px-5 2xl:text-xl">
         <table className="w-full table-auto border-collapse ">
           <thead>
             <tr className=" bg-gray-300 text-left">
@@ -22,24 +37,17 @@ const Admin = () => {
             </tr>
           </thead>
           <tbody>
-            {[1, 2, 3, 4, 5].map((index: number) => {
+            {formData.map((value: any, index: number) => {
               return (
-                <tr key={index} className="border-t border-gray-300">
-                  <td className="break-words">Alfreds Futterkiste</td>
-                  <td>alfredsfutterkiste@gmail.com</td>
-                  <td className="break-all">924637892012345929246378</td>
-                  <td>Germany</td>
-                  <td>Course 1,Course 2,Course 3</td>
-                  <td className="flex justify-center">
-                    <button className="btn-primary py-2 xl:py-3 2xl:py-4" disabled={false}>
-                      approve
-                    </button>
-
-                    {/* <button className="btn-black-and-white">
-                      approved
-                    </button> */}
-                  </td>
-                </tr>
+                <FormValue
+                  key={index}
+                  fullName={value.fullName}
+                  email={value.email}
+                  number={value.number}
+                  country={value.country}
+                  courses={value.courses}
+                  approved={value.approved}
+                />
               );
             })}
           </tbody>

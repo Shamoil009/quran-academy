@@ -19,14 +19,12 @@ const initialState: IformState = {
   isFormActivityInProgress: false,
 };
 
-// get all companies
+// get all form
 export const getAllForm = createAsyncThunk(
-  "getAllCompanines/company",
-  async (company, { rejectWithValue }) => {
+  "getAllForm/form",
+  async (page:any, { rejectWithValue }) => {
     try {
-      const { data } = await axiosInstance().get(
-        `/companies/get-all-companies`,
-      );
+      const { data } = await axiosInstance().get(`/user/get-data/${page}`);
       return data;
     } catch (error: any) {
       return rejectWithValue(error.response);
@@ -111,7 +109,7 @@ const formSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    //get all companies
+    //get all form
     builder
       .addCase(getAllForm.pending, (state, action: any) => {
         state.isFormActivityInProgress = true;
@@ -126,7 +124,9 @@ const formSlice = createSlice({
       .addCase(getAllForm.fulfilled, (state, action: any) => {
         state.isFormActivityInProgress = false;
         state.formError = action.payload.message;
-        state.form = action.payload.companies;
+        state.form = action.payload.formData.rows;
+        state.numberOfPages = action.payload.numberOfPages;
+        state.count = action.payload.formData.count;
       });
     //add new company
     builder

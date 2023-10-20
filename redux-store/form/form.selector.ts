@@ -1,29 +1,29 @@
 import { createDraftSafeSelector } from "@reduxjs/toolkit";
 import { IformState } from "./form.types";
 
-const selectDomain = (state: any) => state.companyReducer;
+const selectDomain = (state: any) => state.formReducer;
 
-export const form = createDraftSafeSelector(
+export const allForm = createDraftSafeSelector(
   selectDomain,
-  (form: IformState) => form.form,
+  (FormData: IformState) => FormData.form,
 );
 
 export const singleForm = createDraftSafeSelector(
   selectDomain,
-  (form: IformState) => form.singleForm,
+  (FormData: IformState) => FormData.singleForm,
 );
 
 export const formSuccessMessage = createDraftSafeSelector(
   selectDomain,
-  (form: IformState) => form.formSuccessMesssage,
+  (FormData: IformState) => FormData.formSuccessMesssage,
 );
 
 export const formError = createDraftSafeSelector(
   selectDomain,
-  (form: IformState) => form.formError,
+  (FormData: IformState) => FormData.formError,
 );
 
 export const formActivityInProcess = createDraftSafeSelector(
   selectDomain,
-  (form: IformState) => form.isFormActivityInProgress,
+  (FormData: IformState) => FormData.isFormActivityInProgress,
 );
