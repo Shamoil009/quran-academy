@@ -22,7 +22,7 @@ const initialState: IformState = {
 // get all form
 export const getAllForm = createAsyncThunk(
   "getAllForm/form",
-  async (page:any, { rejectWithValue }) => {
+  async (page: any, { rejectWithValue }) => {
     try {
       const { data } = await axiosInstance().get(`/user/get-data/${page}`);
       return data;
@@ -55,20 +55,13 @@ export const createForm = createAsyncThunk(
 
 //update company
 export const updateForm = createAsyncThunk(
-  "updateCompany/company",
-  async ({ companyForm, companyId, thumbnail }: any, { rejectWithValue }) => {
+  "updateForm/form",
+  async (formId : any, { rejectWithValue }) => {
     try {
-      const { data } = await axiosInstance().put(
-        `/companies/update-company/${companyId}`,
+      const { data } = await axiosInstance().post(
+        `/user/update-form/${formId}`,
         {
-          companyName: companyForm.companyName,
-          contactPerson: companyForm.contactPerson,
-          companyLogo: thumbnail,
-        },
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
+          approved: true,
         },
       );
       return data;

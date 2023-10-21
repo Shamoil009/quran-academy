@@ -1,22 +1,48 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch } from "@/redux-store/store";
+import {
+  allForm,
+  count,
+  numberOfPages,
+} from "@/redux-store/form/form.selector";
+import {
+  formsCleanUp,
+  getAllForm,
+  updateForm,
+} from "@/redux-store/form/form.slice";
 
 type Props = {
+  id: number;
   fullName?: string;
   email?: string;
   number?: string;
   country?: string;
   courses?: string;
   approved?: boolean;
+  page?:any
 };
 
 const FormValue = ({
+  id,
   fullName,
   email,
   number,
   country,
   courses,
   approved,
+  page
 }: Props) => {
+  const dispatch = useDispatch<AppDispatch>();
+  const formData = useSelector(allForm);
+
+  const approveHandler = (id: number) => {
+    dispatch(updateForm(id)).then(()=>{
+      dispatch(getAllForm(page))
+    });
+    console.log(id);
+  };
+
   return (
     <tr className="border-t border-gray-300">
       <td className="break-words">{fullName}</td>
@@ -26,6 +52,7 @@ const FormValue = ({
       <td>{courses}</td>
       <td className="flex justify-center">
         <button
+          onClick={() => approveHandler(id)}
           className={`${
             approved &&
             "border border-primaryColor bg-transparent text-primaryColor hover:bg-transparent"
@@ -34,7 +61,6 @@ const FormValue = ({
         >
           {approved ? "approved" : "approve"}
         </button>
-
       </td>
     </tr>
   );

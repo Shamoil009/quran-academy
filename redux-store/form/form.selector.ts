@@ -13,6 +13,16 @@ export const singleForm = createDraftSafeSelector(
   (FormData: IformState) => FormData.singleForm,
 );
 
+export const numberOfPages = createDraftSafeSelector(
+  selectDomain,
+  (FormData: IformState) => FormData.numberOfPages,
+);
+
+export const count = createDraftSafeSelector(
+  selectDomain,
+  (FormData: IformState) => FormData.count,
+);
+
 export const formSuccessMessage = createDraftSafeSelector(
   selectDomain,
   (FormData: IformState) => FormData.formSuccessMesssage,
