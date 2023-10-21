@@ -1,31 +1,45 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import { useFormik } from "formik";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch } from "@/redux-store/store";
-import authSlice, {
+import {
+  errorCleanUp,
   loginUser,
   messageCleanUp,
 } from "@/redux-store/auth/auth.slice";
-import { error, loginSuccessMessage } from "@/redux-store/auth/auth.selector";
+import {
+  activityInProcess,
+  error,
+  loginSuccessMessage,
+} from "@/redux-store/auth/auth.selector";
 import { useRouter } from "next/navigation";
+import Loader from "../Loader";
+import { loginSchema } from "@/utils/validation";
 
 const Login = () => {
   const router = useRouter();
   const dispatch = useDispatch<AppDispatch>();
   const message = useSelector(loginSuccessMessage);
+  const loader = useSelector(activityInProcess);
   const loginError = useSelector(error);
-  const [form, setForm] = useState({ email: "", password: "" });
 
-  const formChangeHandler = (event: any) => {
-    setForm((preState: any) => {
-      return { ...preState, [event.target.name]: event.target.value };
-    });
-    console.log(form);
+  const initialValues = {
+    email: "",
+    password: "",
   };
+  const Formik = useFormik({
+    initialValues: initialValues,
+    validationSchema: loginSchema,
+    onSubmit: (values, action) => {
+      console.log(values);
+      dispatch(loginUser(values));
+      action.resetForm(); //to remove entered values in a form
+    },
+  });
 
-  const submitHandler = () => {
-    dispatch(loginUser(form));
-  };
+  const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
+    Formik;
 
   useEffect(() => {
     if (message === "login successful") {
@@ -34,6 +48,12 @@ const Login = () => {
       dispatch(messageCleanUp());
     }
   }, [message]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      dispatch(errorCleanUp());
+    }, 6000);
+  }, [loginError]);
 
   return (
     <div className="flex h-screen w-full items-center justify-center bg-gray-50">
@@ -46,28 +66,54 @@ const Login = () => {
           <input
             type="email"
             name="email"
-            onChange={formChangeHandler}
+            id="email"
+            placeholder="Email"
+            value={values.email}
+            onChange={handleChange}
+            onBlur={handleBlur}
             className="mt-1 w-full border-b border-black bg-transparent p-2 outline-none"
           />
+          {errors.email && touched.email ? (
+            <p className="pt-3 text-xs text-red-600 2xl:text-sm">
+              {errors.email}
+            </p>
+          ) : null}
         </div>
         <div className="pt-5 xl:pt-8">
           <div>Password</div>
           <input
-            type="text"
+            type="password"
             name="password"
-            onChange={formChangeHandler}
+            id="password"
+            placeholder="Password"
+            value={values.password}
+            onChange={handleChange}
+            onBlur={handleBlur}
             className="mt-1 w-full border-b border-black bg-transparent p-2 outline-none"
           />
+          {errors.password && touched.password ? (
+            <p className="pt-3 text-xs text-red-600 2xl:text-sm">
+              {errors.password}
+            </p>
+          ) : null}
         </div>
         {message && (
-          <div className="pt-3 text-xs 2xl:text-sm text-green-600">{message}</div>
+          <div className="pt-3 text-xs text-green-600 2xl:text-sm">
+            {message}
+          </div>
         )}
         {loginError && (
-          <div className="pt-3 text-xs 2xl:text-sm text-red-600">{loginError.message}</div>
+          <div className="pt-3 text-xs text-red-600 2xl:text-sm">
+            {loginError.message}
+          </div>
         )}
         <div className="flex justify-center pt-5 xl:pt-8">
-          <button className=" btn-primary" onClick={submitHandler}>
-            Login
+          <button
+            className=" btn-primary"
+            onClick={() => handleSubmit()}
+            disabled={loader}
+          >
+            {loader ? <Loader /> : "Login"}
           </button>
         </div>
       </div>

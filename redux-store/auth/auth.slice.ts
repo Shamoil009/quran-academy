@@ -22,7 +22,7 @@ export const verifyToken = createAsyncThunk(
   "verify/token",
   async (value, { rejectWithValue }) => {
     try {
-      const { data } = await axiosInstance().get("/auth/verify-token");
+      const { data } = await axiosInstance().get("/user/verify-token");
       return data;
     } catch (error: any) {
       return rejectWithValue(error.response);

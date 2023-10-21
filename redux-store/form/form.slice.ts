@@ -32,20 +32,12 @@ export const getAllForm = createAsyncThunk(
   },
 );
 
-//create new company
+//create new form
 export const createForm = createAsyncThunk(
-  "createCompany/company",
+  "createForm/form",
   async (company: any, { rejectWithValue }) => {
     try {
-      const { data } = await axiosInstance().post(
-        "/companies/add-company",
-        company,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        },
-      );
+      const { data } = await axiosInstance().post("/user/add-form", company);
       return data;
     } catch (error: any) {
       return rejectWithValue(error.response);
@@ -56,7 +48,7 @@ export const createForm = createAsyncThunk(
 //update company
 export const updateForm = createAsyncThunk(
   "updateForm/form",
-  async (formId : any, { rejectWithValue }) => {
+  async (formId: any, { rejectWithValue }) => {
     try {
       const { data } = await axiosInstance().post(
         `/user/update-form/${formId}`,
