@@ -1,16 +1,8 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { AppDispatch } from "@/redux-store/store";
-import {
-  allForm,
-  count,
-  numberOfPages,
-} from "@/redux-store/form/form.selector";
-import {
-  formsCleanUp,
-  getAllForm,
-  updateForm,
-} from "@/redux-store/form/form.slice";
+
+import { getAllForm, updateForm } from "@/redux-store/form/form.slice";
 
 type Props = {
   id: number;
@@ -20,7 +12,7 @@ type Props = {
   country?: string;
   courses?: string;
   approved?: boolean;
-  page?:any
+  page?: any;
 };
 
 const FormValue = ({
@@ -31,17 +23,18 @@ const FormValue = ({
   country,
   courses,
   approved,
-  page
+  page,
 }: Props) => {
   const dispatch = useDispatch<AppDispatch>();
-  const formData = useSelector(allForm);
 
   const approveHandler = (id: number) => {
-    dispatch(updateForm(id)).then(()=>{
-      dispatch(getAllForm(page))
+    dispatch(updateForm(id)).then(() => {
+      dispatch(getAllForm(page));
     });
     console.log(id);
   };
+
+  
 
   return (
     <tr className="border-t border-gray-300">

@@ -35,9 +35,11 @@ export const getAllForm = createAsyncThunk(
 //create new form
 export const createForm = createAsyncThunk(
   "createForm/form",
-  async (company: any, { rejectWithValue }) => {
+  async (form: any, { rejectWithValue }) => {
     try {
-      const { data } = await axiosInstance().post("/user/add-form", company);
+      console.log(form);
+      
+      const { data } = await axiosInstance().post("/user/add-form", form);
       return data;
     } catch (error: any) {
       return rejectWithValue(error.response);
@@ -113,7 +115,7 @@ const formSlice = createSlice({
         state.numberOfPages = action.payload.numberOfPages;
         state.count = action.payload.formData.count;
       });
-    //add new company
+    //add new form
     builder
       .addCase(createForm.pending, (state, action: any) => {
         state.isFormActivityInProgress = true;
