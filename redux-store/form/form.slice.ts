@@ -19,14 +19,12 @@ const initialState: IformState = {
   isFormActivityInProgress: false,
 };
 
-// get all companies
+// get all form
 export const getAllForm = createAsyncThunk(
-  "getAllCompanines/company",
-  async (company, { rejectWithValue }) => {
+  "getAllForm/form",
+  async (page: any, { rejectWithValue }) => {
     try {
-      const { data } = await axiosInstance().get(
-        `/companies/get-all-companies`,
-      );
+      const { data } = await axiosInstance().get(`/user/get-data/${page}`);
       return data;
     } catch (error: any) {
       return rejectWithValue(error.response);
@@ -34,20 +32,14 @@ export const getAllForm = createAsyncThunk(
   },
 );
 
-//create new company
+//create new form
 export const createForm = createAsyncThunk(
-  "createCompany/company",
-  async (company: any, { rejectWithValue }) => {
+  "createForm/form",
+  async (form: any, { rejectWithValue }) => {
     try {
-      const { data } = await axiosInstance().post(
-        "/companies/add-company",
-        company,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        },
-      );
+      console.log(form);
+      
+      const { data } = await axiosInstance().post("/user/add-form", form);
       return data;
     } catch (error: any) {
       return rejectWithValue(error.response);
@@ -57,20 +49,13 @@ export const createForm = createAsyncThunk(
 
 //update company
 export const updateForm = createAsyncThunk(
-  "updateCompany/company",
-  async ({ companyForm, companyId, thumbnail }: any, { rejectWithValue }) => {
+  "updateForm/form",
+  async (formId: any, { rejectWithValue }) => {
     try {
-      const { data } = await axiosInstance().put(
-        `/companies/update-company/${companyId}`,
+      const { data } = await axiosInstance().post(
+        `/user/update-form/${formId}`,
         {
-          companyName: companyForm.companyName,
-          contactPerson: companyForm.contactPerson,
-          companyLogo: thumbnail,
-        },
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
+          approved: true,
         },
       );
       return data;
@@ -111,7 +96,7 @@ const formSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    //get all companies
+    //get all form
     builder
       .addCase(getAllForm.pending, (state, action: any) => {
         state.isFormActivityInProgress = true;
@@ -126,9 +111,11 @@ const formSlice = createSlice({
       .addCase(getAllForm.fulfilled, (state, action: any) => {
         state.isFormActivityInProgress = false;
         state.formError = action.payload.message;
-        state.form = action.payload.companies;
+        state.form = action.payload.formData.rows;
+        state.numberOfPages = action.payload.numberOfPages;
+        state.count = action.payload.formData.count;
       });
-    //add new company
+    //add new form
     builder
       .addCase(createForm.pending, (state, action: any) => {
         state.isFormActivityInProgress = true;

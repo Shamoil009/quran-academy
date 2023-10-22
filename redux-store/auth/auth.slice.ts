@@ -22,7 +22,7 @@ export const verifyToken = createAsyncThunk(
   "verify/token",
   async (value, { rejectWithValue }) => {
     try {
-      const { data } = await axiosInstance().get("/auth/verify-token");
+      const { data } = await axiosInstance().get("/user/verify-token");
       return data;
     } catch (error: any) {
       return rejectWithValue(error.response);
@@ -36,7 +36,7 @@ export const loginUser = createAsyncThunk(
   "login/user",
   async (userDetails: any, { rejectWithValue }) => {
     try {
-      const { data } = await axiosInstance().post("/auth/login", userDetails);
+      const { data } = await axiosInstance().post("/user/login", userDetails);
       localStorage.setItem(QA_TOKEN, data.token);
       return data;
     } catch (error: any) {

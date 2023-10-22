@@ -1,10 +1,13 @@
-import Admin from '@/components/Admin'
-import React from 'react'
+import Admin from "@/components/Admin";
+import AuthGuard from "@/components/AuthGuard";
+import React from "react";
 
 const page = () => {
   return (
-    <Admin/>
-  )
-}
+    <AuthGuard>
+      <Admin />
+    </AuthGuard>
+  );
+};
 
-export default page
+export default page;

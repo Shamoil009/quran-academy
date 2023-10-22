@@ -10,9 +10,11 @@ interface formDetail {
 }
 
 export interface IformState {
-  form?: formDetail[];
+  form?: any;
   singleForm?: formDetail;
-  formSuccessMesssage:string;
+  numberOfPages?: number;
+  count?: number;
+  formSuccessMesssage: string;
   formError?: any;
   isFormActivityInProgress?: boolean;
 }
