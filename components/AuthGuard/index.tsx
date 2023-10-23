@@ -34,7 +34,8 @@ const AuthGuard = ({ children }: Props) => {
   }, []);
 
   useEffect(() => {
-    if (tokenValidOrNotMessage === "token is invalid") {
+
+    if (tokenValidOrNotMessage === "Token is invalid") {
       setToken(false);
       dispatch(tokenCleaner());
       dispatch(formsCleanUp())
@@ -44,7 +45,7 @@ const AuthGuard = ({ children }: Props) => {
     //else if (tokenValidOrNotMessage === "token is valid" && traceAuth) {
       // dispatch(getUserDetails());
     // }
-  }, [tokenValidOrNotMessage, traceAuth]);
+  }, [tokenValidOrNotMessage]);
 
   return <>{token ? <>{children}</> : ""}</>;
 };

@@ -33,8 +33,10 @@ const FormValue = ({
     });
     console.log(id);
   };
+  const dataArray = courses?.split(",");
 
-  
+  // Now, dataArray contains the individual items as elements of an array
+  console.log(dataArray);
 
   return (
     <tr className="border-t border-gray-300">
@@ -42,18 +44,27 @@ const FormValue = ({
       <td>{email}</td>
       <td className="break-all">{number}</td>
       <td>{country}</td>
-      <td>{courses}</td>
-      <td className="flex justify-center">
-        <button
-          onClick={() => approveHandler(id)}
-          className={`${
-            approved &&
-            "border border-primaryColor bg-transparent text-primaryColor hover:bg-transparent"
-          } btn-primary py-2 xl:py-3 2xl:py-4`}
-          disabled={approved ? true : false}
-        >
-          {approved ? "approved" : "approve"}
-        </button>
+      {/* <td >{courses}</td> */}
+      <td>
+        <ol>
+          {dataArray?.map((value: any, index: number) => {
+            return <li key={index}>{value}</li>;
+          })}
+        </ol>
+      </td>
+      <td>
+        <div className="flex w-full justify-center">
+          <button
+            onClick={() => approveHandler(id)}
+            className={`${
+              approved &&
+              "border border-primaryColor bg-transparent text-primaryColor hover:bg-transparent"
+            } btn-primary py-2 xl:py-3 2xl:py-4`}
+            disabled={approved ? true : false}
+          >
+            {approved ? "approved" : "approve"}
+          </button>
+        </div>
       </td>
     </tr>
   );

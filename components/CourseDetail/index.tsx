@@ -49,7 +49,10 @@ const CourseDetail = () => {
 
             </div>
           </div>
-          <Link href={`/contact?courseId=${courseId}`}><button className="btn-primary my-3">Apply Now</button></Link>
+          <Link 
+          // href={`/contact?courseId=${courseId}`}
+          href={`/contact`}          
+          ><button className="btn-primary my-3">Apply Now</button></Link>
         </section>
       )}
 

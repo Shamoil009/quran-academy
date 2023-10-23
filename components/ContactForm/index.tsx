@@ -12,18 +12,26 @@ import { useFormik } from "formik";
 import { fillFormSchema } from "@/utils/validation";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch } from "@/redux-store/store";
-import { createForm } from "@/redux-store/form/form.slice";
+import { createForm, messageCleanUp } from "@/redux-store/form/form.slice";
+import {
+  formActivityInProcess,
+  formError,
+  formSuccessMessage,
+} from "@/redux-store/form/form.selector";
+import SuccessPopup from "./SuccessPopup";
+import Loader from "../Loader";
 
 const ContactForm = () => {
   const dispatch = useDispatch<AppDispatch>();
-  // const message = useSelector(loginSuccessMessage);
-  // const loader = useSelector(activityInProcess);
-  // const loginError = useSelector(error);
+  const formMsg = useSelector(formSuccessMessage);
+  const formErrorMsg = useSelector(formError);
+  const loader = useSelector(formActivityInProcess);
 
   const searchParams = useSearchParams();
   const courseId = searchParams.get("courseId");
 
   const [selectedCourses, setSelectedCourses] = useState<any>([]);
+  const [showPopup, setShowPopup] = useState(false);
 
   const convertArrayObjToString = (array: any) => {
     return array.map((obj: { name: any }) => obj.name).join(",");
@@ -59,7 +67,6 @@ const ContactForm = () => {
     initialValues: initialValues,
     validationSchema: fillFormSchema,
     onSubmit: async (values, action) => {
-      // await setFieldValue("courses", stringOfCourses);
       console.log(values);
       dispatch(createForm(values));
       console.log(selectedCourses);
@@ -77,6 +84,13 @@ const ContactForm = () => {
     handleSubmit,
     setFieldValue,
   } = Formik;
+
+  useEffect(() => {
+    if (formMsg === "form created") {
+      setShowPopup(true);
+      dispatch(messageCleanUp());
+    }
+  }, [formMsg]);
 
   return (
     <div>
@@ -222,14 +236,21 @@ const ContactForm = () => {
                   </div>
                 </div>
               </div>
+              {formErrorMsg && (
+                <div className=" pt-3 text-xs text-red-600 2xl:text-sm">
+                  {formErrorMsg.message}
+                </div>
+              )}
               <div className="flex justify-center pt-2">
                 <button
                   className="btn-primary my-3 rounded-md"
                   onClick={() => handleSubmit()}
+                  disabled={loader}
                 >
-                  Submit
+                  {loader ? <Loader /> : "Submit"}
                 </button>
               </div>
+              {showPopup && <SuccessPopup setShowPopup={setShowPopup} />}
             </div>
 
             {/* second half */}

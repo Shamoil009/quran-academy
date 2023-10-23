@@ -70,12 +70,12 @@ const Admin = () => {
   return (
     <div className="flex h-screen w-full">
       {/* ---sidebar--- */}
-      <div className="fixed h-screen w-[20%] border-r border-gray-400 px-2 pt-5">
+      {/* <div className="fixed h-screen w-[20%] border-r border-gray-400 px-2 pt-5">
         sidebar
-      </div>
+      </div> */}
       {/* ---sidebar end--- */}
-      <div className="w-[20%]" />
-      <div className="w-[80%] px-3 py-5 text-xs xl:text-base 2xl:px-5 2xl:text-xl">
+      {/* <div className="w-[20%]" /> */}
+      <div className="w-[100%] px-3 py-5 text-xs xl:text-base 2xl:px-5 2xl:text-xl">
         <div className="flex justify-end py-4">
           <button className="btn-black-and-white" onClick={logoutHandler}>
             Logout

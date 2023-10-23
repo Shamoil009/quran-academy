@@ -126,6 +126,8 @@ const formSlice = createSlice({
           code: action.payload.status,
           message: action.payload.data.message,
         };
+        console.log(action.payload);
+        
       })
       .addCase(createForm.fulfilled, (state, action: any) => {
         state.isFormActivityInProgress = false;

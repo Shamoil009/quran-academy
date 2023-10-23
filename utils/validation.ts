@@ -11,7 +11,7 @@ export const fillFormSchema = Yup.object({
   email: Yup.string().email().min(1).required("email is required"),
   gender: Yup.string().oneOf(["male", "female", "Rather not say"]),
   number: Yup.string()
-    .matches(/^\d{8,25}$/, "Number must be between 8 and 25 digits")
+    .matches(/^\d{8,25}$/, "Number must be between 8 and 25 digits and no special characters like (+, -)")
     .required("whatsapp no is required"),
   country: Yup.string().min(1).required("country is required"),
   courses: Yup.string().min(1).required("select atleast one course"),

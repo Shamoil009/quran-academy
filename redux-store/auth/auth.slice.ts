@@ -72,7 +72,7 @@ const authSlice = createSlice({
 
       .addCase(verifyToken.rejected, (state, action: any) => {
         state.isActivityInProcess = false;
-        state.isValidTokenMessage = action.payload.isValid;
+        state.isValidTokenMessage = action.payload.data.message;
         state.error = {
           code: action.payload.status,
           message: action.payload.data.message,

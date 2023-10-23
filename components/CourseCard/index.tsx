@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 type Props = {
   id?: number;
@@ -15,9 +16,9 @@ type Props = {
 const CourseCard = ({ id, name, timing, classType, image, price }: Props) => {
   const router = useRouter();
 
-  const viewCourseHandler = () => {
-    router.push(`/course-detail?courseId=${id}`);
-  };
+  // const viewCourseHandler = () => {
+  //   router.push(`/course-detail?courseId=${id}`);
+  // };
 
   return (
     <div className="w-[17rem] rounded-2xl border-2 border-t-0 border-gray-300 shadow-md lg:w-[18rem] lg:rounded-3xl xl:w-[24rem] 2xl:w-[28rem]">
@@ -38,9 +39,14 @@ const CourseCard = ({ id, name, timing, classType, image, price }: Props) => {
         </div>
 
         <div className="flex justify-center px-2 py-2 xl:py-3 2xl:py-4">
-          <button onClick={viewCourseHandler} className="btn-secondary">
-            view details
-          </button>
+          <Link href={`/course-detail?courseId=${id}`}>
+            <button
+              //  onClick={viewCourseHandler}
+              className="btn-secondary"
+            >
+              view details
+            </button>
+          </Link>
         </div>
       </div>
     </div>
