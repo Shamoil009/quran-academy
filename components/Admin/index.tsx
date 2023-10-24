@@ -70,18 +70,18 @@ const Admin = () => {
   return (
     <div className="flex h-screen w-full">
       {/* ---sidebar--- */}
-      <div className="fixed h-screen w-[20%] border-r border-gray-400 px-2 pt-5">
+      {/* <div className="fixed h-screen w-[20%] border-r border-gray-400 px-2 pt-5">
         sidebar
-      </div>
+      </div> */}
       {/* ---sidebar end--- */}
-      <div className="w-[20%]" />
-      <div className="w-[80%] px-3 py-5 text-xs xl:text-base 2xl:px-5 2xl:text-xl">
+      {/* <div className="w-[20%]" /> */}
+      <div className="w-[100%] px-3 py-5 text-xs xl:text-base 2xl:px-5 2xl:text-xl">
         <div className="flex justify-end py-4">
           <button className="btn-black-and-white" onClick={logoutHandler}>
             Logout
           </button>
         </div>
-        <table className="w-full table-auto border-collapse ">
+        <table className="w-full table-auto border-collapse">
           <thead>
             <tr className=" bg-gray-300 text-left">
               <th>Name</th>
@@ -89,11 +89,13 @@ const Admin = () => {
               <th>Number</th>
               <th>Country</th>
               <th>Courses</th>
+              <th>Date</th>
               <th>Approved</th>
             </tr>
           </thead>
           <tbody>
-            {!loader &&
+            {
+            // !loader &&
               formData.map((value: any, index: number) => {
                 return (
                   <FormValue
@@ -105,13 +107,14 @@ const Admin = () => {
                     country={value.country}
                     courses={value.courses}
                     approved={value.approved}
+                    createdAt={value.createdAt}
                     page={activePage}
                   />
                 );
               })}
           </tbody>
         </table>
-        {loader && (
+        {loader && formData.length === 0 && (
           <div className="py-4">
             <Loader />
           </div>
@@ -123,7 +126,7 @@ const Admin = () => {
               <p className="text-xs font-medium lg:text-sm 2xl:text-base">
                 {formData &&
                   `Showing 
-                      ${Math.min(records, 8 * activePage)} of ${records}`}
+                      ${Math.min(records, 10 * activePage)} of ${records}`}
               </p>
             </div>
             <div className="flex flex-row items-center gap-1 2xl:gap-2">

@@ -12,6 +12,7 @@ const initialState: IformState = {
     country: "",
     gender: "",
     courses: "",
+    createdAt:"",
     approved: false,
   },
   formError: {},
@@ -91,6 +92,7 @@ const formSlice = createSlice({
         country: "",
         gender: "",
         courses: "",
+        createdAt:"",
         approved: false,
       };
     },
@@ -126,6 +128,8 @@ const formSlice = createSlice({
           code: action.payload.status,
           message: action.payload.data.message,
         };
+        console.log(action.payload);
+        
       })
       .addCase(createForm.fulfilled, (state, action: any) => {
         state.isFormActivityInProgress = false;
