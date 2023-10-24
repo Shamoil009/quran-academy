@@ -11,6 +11,7 @@ type Props = {
   number?: string;
   country?: string;
   courses?: string;
+  createdAt?:any;
   approved?: boolean;
   page?: any;
 };
@@ -22,6 +23,7 @@ const FormValue = ({
   number,
   country,
   courses,
+  createdAt,
   approved,
   page,
 }: Props) => {
@@ -44,14 +46,18 @@ const FormValue = ({
       <td>{email}</td>
       <td className="break-all">{number}</td>
       <td>{country}</td>
-      {/* <td >{courses}</td> */}
       <td>
-        <ol>
+        <ol className="list-disc">
           {dataArray?.map((value: any, index: number) => {
-            return <li key={index}>{value}</li>;
+            return (
+              <li className="ml-5" key={index}>
+                {value}
+              </li>
+            );
           })}
         </ol>
       </td>
+      <td>{createdAt.split('T')[0]}</td>
       <td>
         <div className="flex w-full justify-center">
           <button
@@ -60,7 +66,7 @@ const FormValue = ({
               approved &&
               "border border-primaryColor bg-transparent text-primaryColor hover:bg-transparent"
             } btn-primary py-2 xl:py-3 2xl:py-4`}
-            disabled={approved ? true : false}
+            disabled={approved}
           >
             {approved ? "approved" : "approve"}
           </button>

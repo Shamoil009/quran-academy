@@ -81,7 +81,7 @@ const Admin = () => {
             Logout
           </button>
         </div>
-        <table className="w-full table-auto border-collapse ">
+        <table className="w-full table-auto border-collapse">
           <thead>
             <tr className=" bg-gray-300 text-left">
               <th>Name</th>
@@ -89,11 +89,13 @@ const Admin = () => {
               <th>Number</th>
               <th>Country</th>
               <th>Courses</th>
+              <th>Date</th>
               <th>Approved</th>
             </tr>
           </thead>
           <tbody>
-            {!loader &&
+            {
+            // !loader &&
               formData.map((value: any, index: number) => {
                 return (
                   <FormValue
@@ -105,13 +107,14 @@ const Admin = () => {
                     country={value.country}
                     courses={value.courses}
                     approved={value.approved}
+                    createdAt={value.createdAt}
                     page={activePage}
                   />
                 );
               })}
           </tbody>
         </table>
-        {loader && (
+        {loader && formData.length === 0 && (
           <div className="py-4">
             <Loader />
           </div>
@@ -123,7 +126,7 @@ const Admin = () => {
               <p className="text-xs font-medium lg:text-sm 2xl:text-base">
                 {formData &&
                   `Showing 
-                      ${Math.min(records, 8 * activePage)} of ${records}`}
+                      ${Math.min(records, 10 * activePage)} of ${records}`}
               </p>
             </div>
             <div className="flex flex-row items-center gap-1 2xl:gap-2">

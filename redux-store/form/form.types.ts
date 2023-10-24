@@ -6,6 +6,7 @@ interface formDetail {
   country: string;
   gender: string;
   courses: string;
+  createdAt:any;
   approved: boolean;
 }
 

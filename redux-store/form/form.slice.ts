@@ -12,6 +12,7 @@ const initialState: IformState = {
     country: "",
     gender: "",
     courses: "",
+    createdAt:"",
     approved: false,
   },
   formError: {},
@@ -91,6 +92,7 @@ const formSlice = createSlice({
         country: "",
         gender: "",
         courses: "",
+        createdAt:"",
         approved: false,
       };
     },
