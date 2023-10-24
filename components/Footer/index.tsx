@@ -35,19 +35,19 @@ const Footer = () => {
               <div className="duration-300 hover:scale-125 hover:cursor-pointer">
                 <FontAwesomeIcon
                   icon={faInstagram}
-                  className="h-5 text-[#8a3ab9] 2xl:h-7"
+                  className="!h-5 text-[#8a3ab9] 2xl:!h-7"
                 />
               </div>
               <div className="duration-300 hover:scale-125 hover:cursor-pointer">
                 <FontAwesomeIcon
                   icon={faTwitter}
-                  className="h-5 text-[#00acee] 2xl:h-7"
+                  className="!h-5 text-[#00acee] 2xl:!h-7"
                 />
               </div>
               <div className="duration-300 hover:scale-125 hover:cursor-pointer">
                 <FontAwesomeIcon
                   icon={faFacebookF}
-                  className="h-5 text-[#3b5998] 2xl:h-7"
+                  className="!h-5 text-[#3b5998] 2xl:!h-7"
                 />
               </div>
             </div>
