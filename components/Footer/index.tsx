@@ -12,13 +12,14 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons/faEnvelope";
 import { faPhone } from "@fortawesome/free-solid-svg-icons/faPhone";
 
 import Logo from "@/public/images/logo.png";
+import Link from "next/link";
 
 const Footer = () => {
   return (
     <footer className=" bg-courseBgColor px-5 py-12 text-sm text-FooterColor lg:px-0 lg:pb-16 lg:pt-12 2xl:pb-20 2xl:pt-16 2xl:text-base">
       <div className="flex  lg:justify-center ">
         <div className="flex flex-col justify-between lg:w-[90%] lg:flex-row 2xl:w-[90%] ">
-          <section className="w-[90%] lg:w-[25%] space-y-2 2xl:space-y-4">
+          <section className="w-[90%] space-y-2 lg:w-[25%] 2xl:space-y-4">
             <Image
               src={Logo}
               height={2000}
@@ -31,7 +32,7 @@ const Footer = () => {
               Learn Islamic and Quranic teachings to Muslim students across the
               world.
             </div>
-            <div className="flex space-x-8 lg:space-x-6 pt-2">
+            <div className="flex space-x-8 pt-2 lg:space-x-6">
               <div className="duration-300 hover:scale-125 hover:cursor-pointer">
                 <FontAwesomeIcon
                   icon={faInstagram}
@@ -52,7 +53,7 @@ const Footer = () => {
               </div>
             </div>
           </section>
-          <section>
+          {/* <section>
             <div className="pt-7 text-lg font-semibold text-[#0A0A0A] lg:pt-0 2xl:text-xl">
               Categories
             </div>
@@ -65,7 +66,7 @@ const Footer = () => {
                 <div>Presentation</div>
               </div>
             </div>
-          </section>
+          </section> */}
           <section className="pt-7 lg:pt-0">
             <div className="text-lg font-semibold text-[#0A0A0A] 2xl:text-xl">
               Explore
@@ -78,34 +79,27 @@ const Footer = () => {
                 />
                 About Us
               </div>
-              <div className="flex items-center gap-1">
+              <Link href={"/"} className="flex items-center gap-1">
                 <FontAwesomeIcon
                   icon={faArrowRight}
                   className="w-3 text-secondaryColor lg:w-4"
                 />
-                Services
-              </div>
-              <div className="flex items-center gap-1">
+                Home
+              </Link>
+              <Link href={"/courses"} className="flex items-center gap-1">
                 <FontAwesomeIcon
                   icon={faArrowRight}
                   className="w-3 text-secondaryColor lg:w-4"
                 />
-                Works
-              </div>
-              <div className="flex items-center gap-1">
-                <FontAwesomeIcon
-                  icon={faArrowRight}
-                  className="w-3 text-secondaryColor lg:w-4"
-                />
-                Blog
-              </div>
-              <div className="flex items-center gap-1">
+                Courses
+              </Link>
+              <Link href={"/contact"} className="flex items-center gap-1">
                 <FontAwesomeIcon
                   icon={faArrowRight}
                   className="w-3 text-secondaryColor lg:w-4"
                 />
                 Contact us
-              </div>
+              </Link>
             </div>
           </section>
           <section className="pt-7 lg:pt-0">
@@ -123,21 +117,21 @@ const Footer = () => {
               <div className="flex items-center gap-2">
                 <FontAwesomeIcon
                   icon={faPhone}
-                  className="w-4 text-secondaryColor lg:w-5"
+                  className="!w-4 text-secondaryColor lg:!w-5"
                 />
                 +92 348 154 8861
               </div>
               <div className="flex items-center gap-2">
                 <FontAwesomeIcon
                   icon={faWhatsapp}
-                  className="w-4 text-secondaryColor lg:w-5"
+                  className="!w-4 text-secondaryColor lg:!w-5"
                 />
                 +1 202 773 5409
               </div>
               <div className="flex items-start gap-2">
                 <FontAwesomeIcon
                   icon={faMap}
-                  className="mt-1 w-4 text-secondaryColor lg:w-5"
+                  className="mt-1 !w-4 text-secondaryColor lg:!w-5"
                 />
                 <div className="w-[90%] md:w-[50%] lg:w-72">
                   Office No. 09, Al.imran Plaza Near Umania Restaurant Dhok
@@ -149,7 +143,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="pt-4 text-center">
-        © Copyright {new Date().getFullYear()} AQquran Academy. All rights
+        © Copyright {new Date().getFullYear()} AQ quran Academy. All rights
         reserved.
       </div>
     </footer>

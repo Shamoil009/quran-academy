@@ -1,8 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
-// import CancelIcon from "@mui/icons-material/Cancel";
 
 import Bar from "@/public/images/header-bar.svg";
 import Image from "next/image";
@@ -11,7 +10,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmarkCircle } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
-  const router = useRouter();
   const pathname = usePathname();
 
   const [openSidebar, setOpenSidebar] = useState(false);
@@ -76,15 +74,14 @@ const Header = () => {
               Home
             </Link>
           </div>
-          {/* <div>
-            <Link href={"/"}>About us</Link>
-          </div> */}
+
           <div>
             <Link
               href={"/courses"}
               onClick={() => setOpenSidebar(false)}
               className={`${
-                activeRoute("courses") && "border-b-2 lg:text-secondaryColor "
+                (activeRoute("courses") || activeRoute("course-detail")) &&
+                "border-b-2 lg:text-secondaryColor "
               } border-tertiaryColor py-1 hover:text-secondaryColor lg:border-secondaryColor`}
             >
               Courses
@@ -108,26 +105,3 @@ const Header = () => {
 };
 export default Header;
 
-// import React from "react";
-// import Image from "next/image";
-
-// import Logo from "@/public/images/logo.png";
-// import Link from "next/link";
-
-// const Header = () => {
-//   return (
-//     <div className="flex items-center justify-between px-8 py-6">
-//       <Image src={Logo} height={2000} width={2000} className="w-28" alt="" />
-//       <div className="flex gap-4 text-2xl">
-//         <div>Home</div>
-//         <div>About us</div>
-//         <div>Courses</div>
-//         <div>Pricing</div>
-//         <div>Contact Us</div>
-//         <div>Registration</div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Header;

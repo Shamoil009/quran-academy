@@ -32,7 +32,9 @@
   /* font-weight: 300; */
   src: url('../public/fonts/Inter-VariableFont_slnt\,wght.ttf')
 }
-
+html {
+  text-rendering: optimizeSpeed;
+}
 
 td,
 th {
@@ -47,6 +49,10 @@ th {
     padding: 8px 5px 8px 5px;
     border: 1px solid rgb(185, 189, 196);
   }
+
+  html {
+    text-rendering: optimizeLegibility;
+  }
 }
 
 @media screen and (min-width: 1600px) {
@@ -57,6 +63,3 @@ th {
     border: 1px solid rgb(185, 189, 196);
   }
 }
-/* li {
-  padding-left: 10px;
-} */

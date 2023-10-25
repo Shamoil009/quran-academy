@@ -79,6 +79,7 @@ const ContactForm = () => {
     values,
     errors,
     touched,
+    resetForm,
     handleBlur,
     handleChange,
     handleSubmit,
@@ -89,6 +90,7 @@ const ContactForm = () => {
     if (formMsg === "form created") {
       setShowPopup(true);
       dispatch(messageCleanUp());
+      resetForm();
     }
   }, [formMsg]);
 

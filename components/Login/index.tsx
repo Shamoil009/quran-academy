@@ -32,19 +32,25 @@ const Login = () => {
     initialValues: initialValues,
     validationSchema: loginSchema,
     onSubmit: (values, action) => {
-      console.log(values);
       dispatch(loginUser(values));
-      action.resetForm(); //to remove entered values in a form
+      //action.resetForm(); //to remove entered values in a form
     },
   });
 
-  const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
-    Formik;
+  const {
+    values,
+    errors,
+    touched,
+    resetForm,
+    handleBlur,
+    handleChange,
+    handleSubmit,
+  } = Formik;
 
   useEffect(() => {
     if (message === "login successful") {
-      console.log(message);
       router.push("/admin");
+      resetForm();
       dispatch(messageCleanUp());
     }
   }, [message]);
