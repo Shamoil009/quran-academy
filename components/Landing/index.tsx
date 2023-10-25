@@ -25,8 +25,7 @@ const Landing = () => {
             <p className="w-[95%] pt-5 text-sm bg-blend-normal lg:w-[85%] lg:text-base xl:text-xl 2xl:text-3xl 2xl:leading-10">
               An Online Quran Education platform, which provides the facility to
               Learn Quran Online Islamic and Quranic teachings to Muslim
-              students across the world in four languages: English, Persian,
-              Pashto, and Urdu.
+              students across the world in two languages: English and Urdu.
             </p>
             <Link href={"/contact"}>
               <button className="btn-primary my-5">Register Now</button>

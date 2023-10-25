@@ -27,7 +27,7 @@ const COURSES = [
     image: "/images/courses-images/3.jpg",
 
     description:
-      "The Quran Memorization course offered by AQ Online Quran Academy is designed for students who are dedicated to memorizing the Quran and provides them with effective techniques and strategies to help them memorize the Quran. The course also focuses on memorizing selected Surahs to strengthen the student's Quranic knowledge and help them build a strong connection with the Quran",
+      "The Quran Memorization course offered by AQ Online Quran Academy is designed for students who are dedicated to memorizing the Quran and provides them with effective techniques and strategies to help them memorize the Quran. The course also focuses on memorizing selected Surahs to strengthen the student's Quranic knowledge and help them build a strong connection with the Quran.",
     timing: "45 Minutes",
     classType: "One to one class",
     test: "Conduct test after 30 days",
@@ -39,7 +39,7 @@ const COURSES = [
     image: "/images/courses-images/4.jpg",
 
     description:
-      "The Quran Translation with Tafseer course offered by AQ Online Quran Academy is an excellent opportunity for students who wish to deepen their understanding of the Quran's meaning. The course combines the study of Quranic Arabic with translation and Tafseer in Urdu language. making it accessible to students who are proficient in Urdu. With experienced teachers and a comprehensive syllabus, this course provides a holistic approach to Quranic learning, emphasizing both linguistic aspects of the Quran.",
+      "The Quran Translation with Tafseer course offered by AQ Online Quran Academy is an excellent opportunity for students who wish to deepen their understanding of the Quran's meaning. The course combines the study of Quranic Arabic with translation and Tafseer in Urdu language, making it accessible to students who are proficient in Urdu. With experienced teachers and a comprehensive syllabus, this course provides a holistic approach to Quranic learning, emphasizing both linguistic aspects of the Quran.",
     timing: "45 Minutes",
     classType: "One to one class",
     test: "Conduct test after 30 days",
@@ -51,7 +51,7 @@ const COURSES = [
     image: "/images/courses-images/5.jpg",
 
     description:
-      "AQ online Quran Academy is affording Islamic fiqah Course. The Islamic fiqah course covers detailed rulings on the pillars of Islam, such as Salat (Namaz), Zakat, Fast (Roza), and Hajj. Students will also learn practical solutions for daily domestic issues, such as the Sunnah of Nikkah, Halal and Haram meat, Umrah, and Warasat. The course offers an opportunity to gain a deep understanding of Islamic law and apply it in everyday life. Understanding Islamic jurisprudence can help you connect with like-minded individuals and deepen your faith. The course can also lead to career opportunities in fields such as Islamic law, education, and social work.",
+      "AQ online Quran Academy is affording Islamic fiqah Course. The Islamic fiqh course covers detailed rulings on the pillars of Islam, such as Salat (Namaz), Zakat, Fast (Roza), and Hajj. Students will also learn practical solutions for daily domestic issues, such as the Sunnah of Nikkah, Halal and Haram meat, Umrah, and Warasat. The course offers an opportunity to gain a deep understanding of Islamic law and apply it in everyday life. Understanding Islamic jurisprudence can help you connect with like-minded individuals and deepen your faith. The course can also lead to career opportunities in fields such as Islamic law, education, and social work.",
     timing: "60 Minutes",
     classType: "One to one class",
     test: "Conduct test after 30 days",
@@ -63,7 +63,7 @@ const COURSES = [
     image: "/images/courses-images/6.jpg",
 
     description:
-      "We offers a Tareekh_e_Islam course, providing students with a comprehensive understanding of the history of Islam and the Prophets (PBUH). The courses cover a range of topics, including the life and teachings of the Prophets (PBUH), the development of Islamic civilization, and the contributions of Muslim scholars throughout history.",
+      "We offer a Tareekh_e_Islam course, providing students with a comprehensive understanding of the history of Islam and the Prophets (PBUH). The courses cover a range of topics, including the life and teachings of the Prophets (PBUH), the development of Islamic civilization, and the contributions of Muslim scholars throughout history.",
     timing: "45 Minutes",
     classType: "One to one class",
     test: "Conduct test after 30 days",
@@ -75,7 +75,7 @@ const COURSES = [
     image: "/images/courses-images/7.jpg",
 
     description:
-      "We offer Arabic Language course for students who are interested in learning or improving their proficiency in the Arabic language. Arabic is a critical language for Muslims, as it is the language of the Quran and many Islamic texts. The Arabic Language Course may cover topics such as vocabulary, grammar, pronunciation, and writing. The course may be tailored to meet the needs of students of all levels, from beginners to advanced learners.",
+      "We offer Arabic Language courses for students who are interested in learning or improving their proficiency in the Arabic language. Arabic is a critical language for Muslims, as it is the language of the Quran and many Islamic texts. The Arabic Language Course may cover topics such as vocabulary, grammar, pronunciation, and writing. The course may be tailored to meet the needs of students of all levels, from beginners to advanced learners.",
     timing: "45 Minutes",
     classType: "One to one class",
     test: "Conduct test after 30 days",
@@ -87,7 +87,7 @@ const COURSES = [
     image: "/images/courses-images/8.jpg",
 
     description:
-      "We offer the traditional Islamic curriculum and includes subjects such as Arabic language, Quran, Hadith, Figah, and Islamic history. The short course is four years, while the full course is eight years.",
+      "We offer the traditional Islamic curriculum and include subjects such as Arabic language, Quran, Hadith, Figah, and Islamic history. The short course is four years, while the full course is eight years.",
     timing: "60 Minutes",
     classType: "One to one class",
     test: "Conduct test after 30 days",
@@ -99,7 +99,7 @@ const COURSES = [
     image: "/images/courses-images/9.jpg",
 
     description:
-      "Seerat-e-Mustafa is a course(Qadam Baa Qadam) that delves into the life and teachings of the Prophet Muhammad, peace be upon him. The course covers a range of topics related to the Prophet's biography, his teachings, and his character. The study of Seerat-e-Mustafa is essential for every Muslim, as it helps to deepen their understanding and appreciation of the Prophet Muhammad's life and legacy. Through this course, students can gain a better understanding of the Prophet's early life, his prophethood, and his struggles in spreading Islam.Overall, Seerat-e-Mustafa is a course that is both informative and inspirational. It helps Muslims to understand the Prophet's life and teachings more deeply and to apply them in their daily lives.",
+      "Seerat-e-Mustafa is a course(Qadam Baa Qadam) that delves into the life and teachings of the Prophet Muhammad (peace be upon him). The course covers a range of topics related to the Prophet's biography, his teachings, and his character. The study of Seerat-e-Mustafa is essential for every Muslim, as it helps to deepen their understanding and appreciation of the Prophet Muhammad's life and legacy. Through this course, students can gain a better understanding of the Prophet's early life, his prophethood, and his struggles in spreading Islam. Overall, Seerat-e-Mustafa is a course that is both informative and inspirational. It helps Muslims to understand the Prophet's life and teachings more deeply and to apply them in their daily lives.",
     timing: "30 Minutes",
     classType: "One to one class",
     test: "Conduct test after 30 days",
@@ -156,7 +156,7 @@ const CHOOSEUS = [
   {
     name: "male female teachers",
     description:
-      "We have many well qualified and expert male and female Quran Tutors and as per the nings of Sharia we offer seprate teachers for male and female students accordingly.",
+      "We have many well-qualified and expert male and female Quran Tutors, and also we offer separate teachers for male and female students accordingly.",
   },
   {
     name: "flexible timings",
