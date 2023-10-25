@@ -39,10 +39,6 @@ const config: Config = {
         courseDetail: "url('/images/course-detail-image.jpg')",
       },
       fontFamily: {
-        Poppins: ["'Poppins', sans-serif"],
-
-        Roboto: ["'Roboto', sans-serif"],
-
         Inter: ["'Inter',sans-serif"],
       },
       boxShadow: {
