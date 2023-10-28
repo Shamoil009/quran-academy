@@ -23,9 +23,14 @@ const Landing = () => {
               Online Quran Learning Platform
             </h1>
             <p className="w-[95%] pt-5 text-sm bg-blend-normal lg:w-[85%] lg:text-base xl:text-xl 2xl:text-3xl 2xl:leading-10">
-              An Online Quran Education platform, which provides the facility to
+              {/* An Online Quran Education platform, which provides the facility to
               Learn Quran Online Islamic and Quranic teachings to Muslim
-              students across the world in two languages: English and Urdu.
+              students across the world in two languages: English and Urdu. */}
+              AQ Online Quran Academy is dedicated to providing comprehensive
+              Quranic education to people worldwide. At AQ Online Quran Academy,
+              we offer personalized one-on-one Quranic education. Our
+              aim is to foster spiritual growth and appreciation for the Quran
+              through qualified tutors.
             </p>
             <Link href={"/contact"}>
               <button className="btn-primary my-5">Register Now</button>
@@ -35,7 +40,7 @@ const Landing = () => {
 
         <div className="">
           {/* book and teacher section */}
-          <section className="flex flex-col items-center justify-evenly gap-4 px-6 py-8 text-textPrimaryColor md:flex-row md:gap-2 xl:px-8 2xl:gap-3 2xl:px-10">
+          {/* <section className="flex flex-col items-center justify-evenly gap-4 px-6 py-8 text-textPrimaryColor md:flex-row md:gap-2 xl:px-8 2xl:gap-3 2xl:px-10">
             <div className="flex max-w-[25rem] items-center gap-4 rounded-xl  border border-gray-200 px-2 py-2 shadow md:max-w-[31rem] lg:rounded-3xl lg:px-5 lg:py-5 lg:shadow-md 2xl:px-7 2xl:py-9">
               <Image
                 src={Books}
@@ -71,7 +76,7 @@ const Landing = () => {
                 </div>
               </div>
             </div>
-          </section>
+          </section> */}
           {/* ------book and teacher section end-----*/}
 
           {/* Founder message */}
