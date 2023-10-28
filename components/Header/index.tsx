@@ -74,6 +74,17 @@ const Header = () => {
               Home
             </Link>
           </div>
+          <div>
+            <Link
+              href={"/about"}
+              onClick={() => setOpenSidebar(false)}
+              className={`${
+                activeRoute("about") && "border-b-2 lg:text-secondaryColor "
+              } border-tertiaryColor py-1 hover:text-secondaryColor lg:border-secondaryColor`}
+            >
+              About
+            </Link>
+          </div>
 
           <div>
             <Link
@@ -104,4 +115,3 @@ const Header = () => {
   );
 };
 export default Header;
-
