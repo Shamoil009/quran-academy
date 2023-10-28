@@ -261,10 +261,11 @@ const ContactForm = () => {
                 Contact Information
               </div>
               <p className="pt-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-                quam ea nesciunt commodi possimus aliquam cupiditate, tempore
-                repudiandae qui modi? Nobis reprehenderit, veniam modi itaque
-                magni temporibus laboriosam laudantium corporis!
+                At AQ Quran Academy, we offer personalized one-on-one Quranic
+                education. Our aim is to foster spiritual growth and
+                appreciation for the Quran through qualified tutors. You can
+                fill out this form or you can contact us directly through
+                Whatsapp or email.
               </p>
               <div className="space-y-2 pt-2 tracking-wide lg:pt-4 2xl:space-y-4 2xl:pt-7 2xl:tracking-wider">
                 <div className="flex items-center gap-2">
