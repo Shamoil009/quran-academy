@@ -32,10 +32,10 @@
   /* font-weight: 300; */
   src: url('../public/fonts/Inter-VariableFont_slnt\,wght.ttf')
 }
+
 html {
   text-rendering: optimizeSpeed;
 }
-
 td,
 th {
   padding: 6px 4px 6px 4px;
