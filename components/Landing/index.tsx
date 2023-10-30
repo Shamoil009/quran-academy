@@ -3,11 +3,10 @@ import Image from "next/image";
 import CourseCard from "../CourseCard";
 import { CHOOSEUS, COURSES } from "@/constants/courses";
 
-import PageTop from "@/public/images/ramadan.jpg";
 import WhyUs from "@/public/images/why-us.jpg";
-import Books from "@/public/images/library-book-education.svg";
-import Teacher from "@/public/images/teacher.svg";
 import FounderImage from "@/public/images/founder-image.jpeg";
+import FounderImage2 from "@/public/images/founder-image2.png";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
@@ -28,9 +27,9 @@ const Landing = () => {
               students across the world in two languages: English and Urdu. */}
               AQ Online Quran Academy is dedicated to providing comprehensive
               Quranic education to people worldwide. At AQ Online Quran Academy,
-              we offer personalized one-on-one Quranic education. Our
-              aim is to foster spiritual growth and appreciation for the Quran
-              through qualified tutors.
+              we offer personalized one-on-one Quranic education. Our aim is to
+              foster spiritual growth and appreciation for the Quran through
+              qualified tutors.
             </p>
             <Link href={"/contact"}>
               <button className="btn-primary my-5">Register Now</button>
@@ -87,15 +86,15 @@ const Landing = () => {
             <div className="flex w-full justify-center ">
               <div className="flex w-full flex-col items-center gap-5 p-2 lg:w-[90%] lg:flex-row lg:items-start xl:w-[80%] xl:gap-7 xl:p-3 2xl:w-[70%] 2xl:gap-10">
                 <Image
-                  src={FounderImage}
-                  className="h-52 w-52 rounded-full object-cover xl:h-60 xl:w-60 2xl:h-72 2xl:w-72"
+                  src={FounderImage2}
+                  className="h-52 w-52 bg-gray-100 rounded-full object-cover xl:h-60 xl:w-60 2xl:h-72 2xl:w-72"
                   height={2000}
                   width={2000}
                   alt=""
                 />
                 <div className=" text-base lg:text-lg xl:text-xl 2xl:text-2xl ">
                   <div className=" py-5 font-medium 2xl:leading-10">
-                    The Holy Quran is the final message from Allah Almighty to
+                    {/* The Holy Quran is the final message from Allah Almighty to
                     all of humanity. It is a blessed scripture that is recited
                     and acted upon, serving as a guide for the success and
                     prosperity of individuals in this world and the hereafter.
@@ -105,7 +104,21 @@ const Landing = () => {
                     Quran Academy maintain high standards, and we encourage you
                     to take advantage of this opportunity to benefit yourself
                     and your children by connecting them with the teachings of
-                    the Holy Quran.
+                    the Holy Quran. */}
+                    <p>
+                      The Holy Quran is the final message, guiding humanity to
+                      the hereafter bright. A blessed scripture, leading to
+                      success in this world and the hereafter{"'"}s light.
+                      Engage with the Quran, reflect upon its teachings, and
+                      implement them in your lives. Take advantage of this
+                      opportunity to connect with the Quran{"'"}s blessed light.
+                    </p>
+                    <p>
+                      Enrich your soul and mind with its wisdom and virtues,
+                      pure and bright. May the guidance within bring peace,
+                      leading you on a path of right. Let the Holy Quran{"'"}s
+                      divine message be your beacon, celestial satellite.
+                    </p>
                   </div>
                   <div>Allama Hafiz Abdul Qadir</div>
                   <div>Founder</div>
