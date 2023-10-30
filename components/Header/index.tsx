@@ -14,7 +14,11 @@ const Header = () => {
 
   const [openSidebar, setOpenSidebar] = useState(false);
 
-  const currentRoute = pathname.slice(pathname.lastIndexOf("/") + 1);
+  // const currentRoute = pathname.slice(pathname.lastIndexOf("/") + 1);
+
+  var parts = pathname.split("/");
+  var currentRoute = parts[parts.length - 2]; // Get the second-to-last part
+
   console.log(currentRoute);
 
   const activeRoute = (route: string) => {
@@ -74,6 +78,17 @@ const Header = () => {
               Home
             </Link>
           </div>
+          <div>
+            <Link
+              href={"/about"}
+              onClick={() => setOpenSidebar(false)}
+              className={`${
+                activeRoute("about") && "border-b-2 lg:text-secondaryColor "
+              } border-tertiaryColor py-1 hover:text-secondaryColor lg:border-secondaryColor`}
+            >
+              About
+            </Link>
+          </div>
 
           <div>
             <Link
@@ -104,4 +119,3 @@ const Header = () => {
   );
 };
 export default Header;
-

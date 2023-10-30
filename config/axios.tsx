@@ -16,7 +16,9 @@ const axiosInstance = () => {
   } else if (process.env.NEXT_PUBLIC_NODE_ENV === "staging") {
     url = "http://143.244.191.170";
   } else if (process.env.NEXT_PUBLIC_NODE_ENV === "production") {
-    url = "http://143.244.191.170";
+    // url = "http://backend.aqonlinequranacademy.com";
+    url = "https://backend.aqonlinequranacademy.com";
+
   }
 
   // console.log(url);

@@ -72,28 +72,41 @@ const Footer = () => {
               Explore
             </div>
             <div className="space-y-2 pt-2 tracking-wide lg:pt-4 2xl:space-y-4 2xl:pt-7 2xl:tracking-wider">
-              <div className="flex items-center gap-1">
+            <Link
+              href={"/"}
+              className="flex items-center gap-1 hover:font-semibold hover:text-primaryColor"
+            >
+              <FontAwesomeIcon
+                icon={faArrowRight}
+                className="w-3 text-secondaryColor lg:w-4"
+              />
+              Home
+            </Link>
+              <Link
+                href={"/about"}
+                className="flex items-center gap-1 hover:font-semibold hover:text-primaryColor"
+              >
                 <FontAwesomeIcon
                   icon={faArrowRight}
                   className="w-3 text-secondaryColor lg:w-4"
                 />
-                About Us
-              </div>
-              <Link href={"/"} className="flex items-center gap-1">
-                <FontAwesomeIcon
-                  icon={faArrowRight}
-                  className="w-3 text-secondaryColor lg:w-4"
-                />
-                Home
+                About us
               </Link>
-              <Link href={"/courses"} className="flex items-center gap-1">
+
+              <Link
+                href={"/courses"}
+                className="flex items-center gap-1 hover:font-semibold hover:text-primaryColor"
+              >
                 <FontAwesomeIcon
                   icon={faArrowRight}
                   className="w-3 text-secondaryColor lg:w-4"
                 />
                 Courses
               </Link>
-              <Link href={"/contact"} className="flex items-center gap-1">
+              <Link
+                href={"/contact"}
+                className="flex items-center gap-1 hover:font-semibold hover:text-primaryColor"
+              >
                 <FontAwesomeIcon
                   icon={faArrowRight}
                   className="w-3 text-secondaryColor lg:w-4"
