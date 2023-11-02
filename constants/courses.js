@@ -4,7 +4,7 @@ const COURSES = [
     name: "Basic quran tajweed",
     price: "50",
     image: "/images/courses-images/1.jpg",
-    description: "",
+    description: "This course focuses on the correct pronunciation of the Arabic letters and the rules of Tajweed. It is essential for anyone who wants to recite the Quran accurately",
     timing: "30 Minutes",
     classType: "One to one class",
     test: "Conduct test after 30 days",
@@ -161,7 +161,7 @@ const CHOOSEUS = [
   {
     name: "flexible timings",
     description:
-      "We are online 24/7 So, Muslims from all around the world can select online Quran Classes timings as per their conformity and availablity.",
+      "We are online 24/7, so Muslims from all around the world can select online Quran classes timing as per their conformity and availability.",
   },
   {
     name: "7 days free trial",
