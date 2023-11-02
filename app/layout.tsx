@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "AQ Online Quran Academy",
   description:
-    "AQ Online Quran Academy is an Online Educational Institution that has been Providing Quranic Education to Students Around the World for the Past 10 years. We ...",
+    "AQ Online Quran Academy is an Online Educational Institution that has been Providing Quranic Education to Students Around the World for the Past 10 years.",
 };
 
 export default function RootLayout({
