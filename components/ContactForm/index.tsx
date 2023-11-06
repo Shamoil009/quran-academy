@@ -67,7 +67,6 @@ const ContactForm = () => {
     initialValues: initialValues,
     validationSchema: fillFormSchema,
     onSubmit: async (values, action) => {
-      console.log(values);
       dispatch(createForm(values));
       console.log(selectedCourses);
 
