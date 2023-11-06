@@ -95,7 +95,6 @@ const Admin = () => {
           </thead>
           <tbody>
             {
-            // !loader &&
               formData.map((value: any, index: number) => {
                 return (
                   <FormValue

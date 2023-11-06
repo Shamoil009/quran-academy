@@ -19,8 +19,6 @@ const Header = () => {
   var parts = pathname.split("/");
   var currentRoute = parts[parts.length - 2]; // Get the second-to-last part
 
-  console.log(currentRoute);
-
   const activeRoute = (route: string) => {
     if (route === currentRoute) return true;
     else return false;

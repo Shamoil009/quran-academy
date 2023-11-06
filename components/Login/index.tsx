@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useFormik } from "formik";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch } from "@/redux-store/store";
@@ -33,7 +33,6 @@ const Login = () => {
     validationSchema: loginSchema,
     onSubmit: (values, action) => {
       dispatch(loginUser(values));
-      //action.resetForm(); //to remove entered values in a form
     },
   });
 
