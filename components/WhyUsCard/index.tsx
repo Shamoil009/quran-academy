@@ -8,13 +8,11 @@ import { faGraduationCap } from "@fortawesome/free-solid-svg-icons/faGraduationC
 import { faPersonDress } from "@fortawesome/free-solid-svg-icons/faPersonDress";
 import { faClockFour } from "@fortawesome/free-regular-svg-icons/faClockFour";
 
-
-
-type Props={
-    index:number,
-    name:string,
-    description:string,
-}
+type Props = {
+  index: number;
+  name: string;
+  description: string;
+};
 
 const iconClass = "h-20 md:h-24 xl:h-28 text-primaryColor";
 const chooseIcon = (iconNumber: number) => {
@@ -22,24 +20,23 @@ const chooseIcon = (iconNumber: number) => {
     return (
       <FontAwesomeIcon
         icon={faChalkboardUser}
-        className="h-20 md:h-24 xl:h-28 text-primaryColor"
+        className="h-20 text-primaryColor md:h-24 xl:h-28"
       />
     );
   else if (iconNumber === 1)
     return <FontAwesomeIcon icon={faPersonChalkboard} className={iconClass} />;
   else if (iconNumber === 2)
-    return <FontAwesomeIcon  icon={faPersonDress} className={iconClass} />;
+    return <FontAwesomeIcon icon={faPersonDress} className={iconClass} />;
   else if (iconNumber === 3)
-    return <FontAwesomeIcon   icon={faClockFour} className={iconClass} />;
-
+    return <FontAwesomeIcon icon={faClockFour} className={iconClass} />;
   else if (iconNumber === 4)
     return <FontAwesomeIcon icon={faChalkboard} className={iconClass} />;
   else if (iconNumber === 5)
     return <FontAwesomeIcon icon={faGraduationCap} className={iconClass} />;
 };
-const WhyUsCard = ({index,name,description}:Props) => {
+const WhyUsCard = ({ index, name, description }: Props) => {
   return (
-    <div className="mx-3 xl:mx-6 2xl:mx-9 w-[17rem] pb-8  lg:w-[18rem] xl:w-[24rem] 2xl:w-[32rem]">
+    <div className="mx-3 w-[17rem] pb-8 lg:w-[18rem] xl:mx-6  xl:w-[24rem] 2xl:mx-9 2xl:w-[32rem]">
       <div className="flex flex-col">
         {chooseIcon(index)}
         <div className="flex flex-col items-center">
