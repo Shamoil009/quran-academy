@@ -22,9 +22,6 @@ const Landing = () => {
               Online Quran Learning Platform
             </h1>
             <p className="w-[95%] pt-5 text-sm bg-blend-normal lg:w-[85%] lg:text-base xl:text-xl 2xl:text-3xl 2xl:leading-10">
-              {/* An Online Quran Education platform, which provides the facility to
-              Learn Quran Online Islamic and Quranic teachings to Muslim
-              students across the world in two languages: English and Urdu. */}
               AQ Online Quran Academy is dedicated to providing comprehensive
               Quranic education to people worldwide. At AQ Online Quran Academy,
               we offer personalized one-on-one Quranic education. Our aim is to
@@ -87,24 +84,13 @@ const Landing = () => {
               <div className="flex w-full flex-col items-center gap-5 p-2 lg:w-[90%] lg:flex-row lg:items-start xl:w-[80%] xl:gap-7 xl:p-3 2xl:w-[70%] 2xl:gap-10">
                 <Image
                   src={FounderImage2}
-                  className="h-52 w-52 bg-gray-100 rounded-full object-cover xl:h-60 xl:w-60 2xl:h-72 2xl:w-72"
+                  className="h-52 w-52 rounded-full bg-gray-100 object-cover xl:h-60 xl:w-60 2xl:h-72 2xl:w-72"
                   height={2000}
                   width={2000}
                   alt=""
                 />
                 <div className=" text-base lg:text-lg xl:text-xl 2xl:text-2xl ">
                   <div className=" py-5 font-medium 2xl:leading-10">
-                    {/* The Holy Quran is the final message from Allah Almighty to
-                    all of humanity. It is a blessed scripture that is recited
-                    and acted upon, serving as a guide for the success and
-                    prosperity of individuals in this world and the hereafter.
-                    It is highly recommended to engage with the Quran, reflect
-                    upon its teachings, and implement them in our lives. We
-                    strive to ensure that the services provided by the online
-                    Quran Academy maintain high standards, and we encourage you
-                    to take advantage of this opportunity to benefit yourself
-                    and your children by connecting them with the teachings of
-                    the Holy Quran. */}
                     <p>
                       The Holy Quran is the final message, guiding humanity to
                       the hereafter bright. A blessed scripture, leading to
