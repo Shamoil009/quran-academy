@@ -102,13 +102,24 @@ const Header = () => {
           </div>
           <div>
             <Link
+              href={"/pricing"}
+              onClick={() => setOpenSidebar(false)}
+              className={`${
+                activeRoute("pricing") && "border-b-2 lg:text-secondaryColor "
+              } border-tertiaryColor py-1 hover:text-secondaryColor lg:border-secondaryColor`}
+            >
+              Pricing
+            </Link>
+          </div>
+          <div>
+            <Link
               href={"/contact"}
               onClick={() => setOpenSidebar(false)}
               className={`${
                 activeRoute("contact") && "border-b-2 lg:text-secondaryColor"
               } border-tertiaryColor py-1 hover:text-secondaryColor lg:border-secondaryColor`}
             >
-              Contact Us
+              Registration
             </Link>
           </div>
         </div>
