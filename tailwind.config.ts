@@ -40,6 +40,9 @@ const config: Config = {
       },
       fontFamily: {
         Inter: ["'Inter',sans-serif"],
+        Cormorant: ["'Cormorant',serif"]
+
+        // font-family: 'Cormorant', serif;
       },
       boxShadow: {
         "login-signup": "0px 4px 52px rgba(0, 0, 0, 0.13)",

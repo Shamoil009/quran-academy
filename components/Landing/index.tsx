@@ -11,6 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import WhyUsCard from "../WhyUsCard";
+import { alegreya } from "../Font";
 
 const Landing = () => {
   return (
@@ -77,7 +78,7 @@ const Landing = () => {
 
           {/* Founder message */}
           <section className="px-3 py-10 text-textPrimaryColor lg:px-6 xl:px-8 xl:py-12 2xl:px-10 2xl:py-16">
-            <div className="pb-3 text-center text-xl font-semibold lg:text-2xl xl:pb-4 xl:text-3xl 2xl:pb-6 2xl:text-4xl">
+            <div className={`${alegreya.className} pb-3 text-center text-2xl font-semibold lg:text-3xl xl:pb-4 xl:text-4xl 2xl:pb-6 2xl:text-5xl`}>
               Message from our Founder{"'"}s
             </div>
             <div className="flex w-full justify-center ">
@@ -116,7 +117,7 @@ const Landing = () => {
 
           {/* Courses Section */}
           <section className=" bg-courseBgColor px-6 py-8 text-textPrimaryColor xl:px-8 xl:py-14 2xl:px-10 2xl:py-20">
-            <div className="pb-12 text-center text-xl font-semibold lg:text-2xl xl:text-3xl 2xl:text-4xl">
+            <div className={`${alegreya.className} pb-12 text-center text-2xl font-semibold lg:text-3xl xl:text-4xl 2xl:text-5xl`}>
               Our featured courses
             </div>
             <div className="flex flex-wrap justify-center gap-x-2 gap-y-14 sm:justify-between 2xl:gap-x-3">
@@ -138,7 +139,7 @@ const Landing = () => {
 
           {/* about us */}
           <section className=" flex flex-col items-center pt-10 text-textPrimaryColor xl:pt-16 2xl:pt-24">
-            <div className="pb-8 text-center text-xl font-semibold lg:text-2xl xl:text-3xl 2xl:text-4xl">
+            <div className={`${alegreya.className} pb-8 text-center text-2xl font-semibold lg:text-3xl xl:text-4xl 2xl:text-5xl`}>
               About Us
             </div>
             <div className="flex w-full flex-col gap-4 sm:w-[98%] sm:flex-row sm:items-center lg:w-[95%] xl:w-[90%] xl:gap-7 2xl:gap-10">
@@ -152,11 +153,11 @@ const Landing = () => {
                 />
               </div>
               <div className="w-full px-3 text-base sm:w-[50%] sm:px-0 lg:text-lg xl:text-xl 2xl:text-2xl">
-                <div className="text-xl font-semibold lg:text-2xl xl:text-3xl 2xl:text-4xl">
+                <div className={`${alegreya.className} text-2xl font-semibold lg:text-3xl xl:text-4xl 2xl:text-5xl`}>
                   Quran Education for all
                 </div>
                 <div className=" py-3 font-medium lg:leading-10 2xl:py-5">
-                  Alquran Academy is an Online Quran Education platform, which
+                  AQ Quran Academy is an Online Quran Education platform, which
                   provides the facility to Learn Quran Online Islamic and Qur
                   {`'`}anic teachings to Muslim students across the world. As a
                   leading Online Quran learning Institute, we offer quality
@@ -209,7 +210,7 @@ const Landing = () => {
 
           {/* about us */}
           <section className="flex flex-col items-center px-2 pt-10 text-textPrimaryColor xl:pt-16 2xl:pt-24">
-            <div className="pb-8 text-center text-xl font-semibold lg:text-2xl xl:text-3xl 2xl:text-4xl">
+            <div className={`${alegreya.className} pb-8 text-center text-2xl font-semibold lg:text-3xl xl:text-4xl 2xl:text-5xl`}>
               Why Choose Us
             </div>
             <div className="grid-col-1 grid sm:grid-cols-2 lg:grid-cols-3">

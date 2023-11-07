@@ -7,6 +7,7 @@ import { faChalkboard } from "@fortawesome/free-solid-svg-icons/faChalkboard";
 import { faGraduationCap } from "@fortawesome/free-solid-svg-icons/faGraduationCap";
 import { faPersonDress } from "@fortawesome/free-solid-svg-icons/faPersonDress";
 import { faClockFour } from "@fortawesome/free-regular-svg-icons/faClockFour";
+import { alegreya } from "../Font";
 
 type Props = {
   index: number;
@@ -40,7 +41,7 @@ const WhyUsCard = ({ index, name, description }: Props) => {
       <div className="flex flex-col">
         {chooseIcon(index)}
         <div className="flex flex-col items-center">
-          <div className="py-3 text-lg font-semibold capitalize lg:text-xl xl:text-2xl 2xl:text-3xl">
+          <div className={`${alegreya.className} py-3 text-xl font-semibold capitalize lg:text-2xl xl:text-3xl 2xl:text-4xl`}>
             {name}
           </div>
           <div className="text-center text-base lg:text-base xl:text-lg 2xl:text-xl ">
