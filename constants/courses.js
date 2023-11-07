@@ -2,9 +2,11 @@ const COURSES = [
   {
     id: 1,
     name: "Basic quran tajweed",
+    feeName: "Basic Quran Tajweed Course",
     price: "50",
     image: "/images/courses-images/1.jpg",
-    description: "This course focuses on the correct pronunciation of the Arabic letters and the rules of Tajweed. It is essential for anyone who wants to recite the Quran accurately",
+    description:
+      "This course focuses on the correct pronunciation of the Arabic letters and the rules of Tajweed. It is essential for anyone who wants to recite the Quran accurately",
     timing: "30 Minutes",
     classType: "One to one class",
     test: "Conduct test after 30 days",
@@ -12,6 +14,8 @@ const COURSES = [
   {
     id: 2,
     name: "Basic nazara with tajweed",
+    feeName: "Basic Nazara Course with Tajweed",
+
     price: "50",
     image: "/images/courses-images/2.jpg",
     description:
@@ -23,6 +27,8 @@ const COURSES = [
   {
     id: 3,
     name: "Quran memorization",
+    feeName: "Quran Memorization",
+
     price: "85",
     image: "/images/courses-images/3.jpg",
 
@@ -35,6 +41,8 @@ const COURSES = [
   {
     id: 4,
     name: "Quran translation with tafseer",
+    feeName: "Quran Translation with Tafseer",
+
     price: "65",
     image: "/images/courses-images/4.jpg",
 
@@ -47,6 +55,8 @@ const COURSES = [
   {
     id: 5,
     name: "Basic fiqah course",
+    feeName: "Islamic Figh Course.",
+
     price: "65",
     image: "/images/courses-images/5.jpg",
 
@@ -57,8 +67,15 @@ const COURSES = [
     test: "Conduct test after 30 days",
   },
   {
+
+    // Dars-e-Nizami Course (Short Course)
+    // Dars-e-Nizami Course (Full Course)
+
+
     id: 6,
     name: "Basic islamic history",
+    feeName: "Basic Islamic History Course",
+
     price: "65",
     image: "/images/courses-images/6.jpg",
 
@@ -71,6 +88,8 @@ const COURSES = [
   {
     id: 7,
     name: "Basic arabic language",
+    feeName: "Arabic Language Course",
+
     price: "65",
     image: "/images/courses-images/7.jpg",
 
@@ -83,6 +102,8 @@ const COURSES = [
   {
     id: 8,
     name: "Darse nazami",
+    feeName: " Dars-e-Nizami course (short 4-year/full 8-year)",
+
     price: "65",
     image: "/images/courses-images/8.jpg",
 
@@ -95,6 +116,8 @@ const COURSES = [
   {
     id: 9,
     name: "Seerat-e-mustafa",
+    feeName: "Seerat-e-Mustafa Course",
+
     price: "65",
     image: "/images/courses-images/9.jpg",
 
@@ -107,6 +130,8 @@ const COURSES = [
   {
     id: 10,
     name: "Basic hadith",
+    feeName: "Hadith Course",
+
     price: "65",
     image: "/images/courses-images/10.jpg",
 
@@ -119,6 +144,8 @@ const COURSES = [
   {
     id: 11,
     name: "Qasas-ul-quran",
+    feeName: "Qasas-ul-Quran",
+
     price: "65",
     image: "/images/courses-images/11.jpg",
 
@@ -131,6 +158,8 @@ const COURSES = [
   {
     id: 12,
     name: "Qasas-ul-anbiya",
+    feeName: "Qasas-ul-Anbiya",
+
     price: "65",
     image: "/images/courses-images/12.jpg",
 
@@ -175,4 +204,4 @@ const CHOOSEUS = [
   },
 ];
 
-export { COURSES ,CHOOSEUS};
+export { COURSES, CHOOSEUS };
