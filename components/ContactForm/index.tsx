@@ -98,7 +98,7 @@ const ContactForm = () => {
       <div className="flex h-[17rem] w-full flex-col justify-center bg-courseDetail bg-cover px-3 lg:h-[28rem] lg:px-10 xl:h-[30rem] 2xl:h-[34rem]">
         <div className="lg:w-[70%]">
           <h1 className="text-2xl font-semibold text-primaryColor bg-blend-normal xl:text-3xl 2xl:text-5xl">
-            Contact
+            Register
           </h1>
         </div>
       </div>
@@ -110,7 +110,7 @@ const ContactForm = () => {
           <div className="flex ">
             <div className="w-full px-3 py-5 lg:w-[70%] xl:px-5 xl:py-7 2xl:px-7 2xl:py-10">
               <h1 className="pb-5 text-lg font-semibold capitalize xl:pb-7 xl:text-xl 2xl:pb-10 2xl:text-3xl">
-                Contact us
+                Register
               </h1>
               <div className="space-y-6 text-sm md:text-base xl:space-y-8 xl:text-base 2xl:space-y-14 2xl:text-xl">
                 {/* Name, email */}
