@@ -2,6 +2,8 @@
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
+import { alegreya } from "../Font";
+
 
 type Props = {
   id?: number;
@@ -24,10 +26,10 @@ const CourseCard = ({ id, name, timing, classType, image, price }: Props) => {
       />
       <div className="px-2 py-2 xl:px-3 xl:py-3 2xl:py-4">
         <div className=" flex justify-between text-sm xl:text-base">
-          <div>{price}$</div>
+          {/* <div>{price}$</div> */}
           <div>{timing}</div>
         </div>
-        <div className="h-20 py-2 text-lg font-bold lg:py-4 lg:text-xl xl:h-28 xl:text-2xl 2xl:h-32 2xl:py-6 2xl:text-3xl">
+        <div className={`${alegreya.className} h-20 py-2 text-xl font-bold lg:py-4 lg:text-2xl xl:h-28 xl:text-3xl 2xl:h-32 2xl:py-6`}>
           {name}
         </div>
 

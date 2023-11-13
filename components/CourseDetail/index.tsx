@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import { COURSES } from "@/constants/courses";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
+import { alegreya } from "../Font";
+
 
 const CourseDetail = () => {
   const searchParams = useSearchParams();
@@ -32,9 +34,9 @@ const CourseDetail = () => {
 
       {/* Detail section */}
       {courseDetail !== undefined && (
-        <section className=" flex flex-col items-center  py-8 xl:py-12 2xl:py-16 text-base lg:text-lg xl:text-xl 2xl:text-3xl text-textPrimaryColor">
+        <section className={` flex flex-col items-center  py-8 xl:py-12 2xl:py-16 text-base lg:text-lg xl:text-xl 2xl:text-3xl text-textPrimaryColor`}>
           <div className="w-[88%] md:w-[70%]">
-            <h1 className="pb-5 lg:pb-7 2xl:pb-10 text-center text-xl lg:text-2xl xl:text-3xl 2xl:text-5xl font-semibold capitalize underline">
+            <h1 className={`${alegreya.className} pb-5 lg:pb-7 2xl:pb-10 text-center text-2xl lg:text-3xl xl:text-4xl 2xl:text-6xl font-semibold capitalize underline`}>
               {courseDetail?.name}
             </h1>
             {/* <div dangerouslySetInnerHTML={{ __html: COURSES[1].description }} /> */}

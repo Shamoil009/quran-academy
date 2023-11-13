@@ -1,4 +1,12 @@
 import React from "react";
+import { Alegreya} from "next/font/google";
+
+const alegreya = Alegreya({
+  subsets: ['latin'],
+
+  // weight: "700",
+  display: 'swap',
+});
 
 const About = () => {
   return (
@@ -15,7 +23,7 @@ const About = () => {
 
       <section className=" flex flex-col items-center  py-8 text-base text-textPrimaryColor lg:text-lg xl:py-12 xl:text-xl 2xl:py-16 2xl:text-3xl">
         <div className="w-[88%] md:w-[70%]">
-          <h1 className="pb-5 text-center text-xl font-semibold capitalize underline lg:pb-7 lg:text-2xl xl:text-3xl 2xl:pb-10 2xl:text-5xl">
+          <h1 className={`${alegreya.className} pb-5 lg:pb-7 2xl:pb-10 text-center text-2xl lg:text-3xl xl:text-4xl 2xl:text-6xl font-semibold capitalize underline`}>
             About AQ online Quran Academy
           </h1>
 

@@ -1,11 +1,11 @@
-import CourseDetail from "@/components/CourseDetail";
 import Layout from "@/components/Layout";
+import Pricing from "@/components/Pricing";
 import React from "react";
 
 const page = () => {
   return (
     <Layout>
-      <CourseDetail />
+      <Pricing />
     </Layout>
   );
 };

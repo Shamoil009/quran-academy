@@ -2,6 +2,7 @@
 import React from "react";
 import { COURSES } from "@/constants/courses";
 import CourseCard from "../CourseCard";
+import { alegreya } from "../Font";
 
 const Courses = () => {
   return (
@@ -17,7 +18,7 @@ const Courses = () => {
       {/* Detail section */}
 
       <section className=" my-8 bg-courseBgColor px-6 py-8 text-textPrimaryColor xl:my-14 xl:px-8 xl:py-14 2xl:my-20   2xl:px-10 2xl:py-20">
-        <div className="pb-12 text-center text-xl font-semibold lg:text-2xl xl:text-3xl 2xl:text-4xl">
+        <div className={`${alegreya.className} pb-12 text-center text-2xl font-semibold capitalize underline lg:text-3xl xl:text-4xl 2xl:text-5xl`}>
           We provide varity of courses
         </div>
         <div className="flex flex-wrap justify-center gap-x-2 gap-y-14 sm:justify-between 2xl:gap-x-3">

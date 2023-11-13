@@ -72,16 +72,16 @@ const Footer = () => {
               Explore
             </div>
             <div className="space-y-2 pt-2 tracking-wide lg:pt-4 2xl:space-y-4 2xl:pt-7 2xl:tracking-wider">
-            <Link
-              href={"/"}
-              className="flex items-center gap-1 hover:font-semibold hover:text-primaryColor"
-            >
-              <FontAwesomeIcon
-                icon={faArrowRight}
-                className="w-3 text-secondaryColor lg:w-4"
-              />
-              Home
-            </Link>
+              <Link
+                href={"/"}
+                className="flex items-center gap-1 hover:font-semibold hover:text-primaryColor"
+              >
+                <FontAwesomeIcon
+                  icon={faArrowRight}
+                  className="w-3 text-secondaryColor lg:w-4"
+                />
+                Home
+              </Link>
               <Link
                 href={"/about"}
                 className="flex items-center gap-1 hover:font-semibold hover:text-primaryColor"
@@ -103,6 +103,18 @@ const Footer = () => {
                 />
                 Courses
               </Link>
+
+              <Link
+                href={"/pricing"}
+                className="flex items-center gap-1 hover:font-semibold hover:text-primaryColor"
+              >
+                <FontAwesomeIcon
+                  icon={faArrowRight}
+                  className="w-3 text-secondaryColor lg:w-4"
+                />
+                Pricing
+              </Link>
+
               <Link
                 href={"/contact"}
                 className="flex items-center gap-1 hover:font-semibold hover:text-primaryColor"
@@ -111,7 +123,7 @@ const Footer = () => {
                   icon={faArrowRight}
                   className="w-3 text-secondaryColor lg:w-4"
                 />
-                Contact us
+                Registration
               </Link>
             </div>
           </section>
